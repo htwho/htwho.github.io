@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"htwho.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Tisserand Relation T_J Date: January 12, 2021 Keywords: Asteroid, Comets, Homework Note: Course : Comets and Asteroids Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\),">
+  <meta name="description" content="Tisserand Relation T_J Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-maj">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tisserand relation">
 <meta property="og:url" content="https://htwho.github.io/2021/Tisserand%20Relation%20T_J/index.html">
 <meta property="og:site_name" content="Lai Hsuan&#39;s Blue box">
-<meta property="og:description" content="Tisserand Relation T_J Date: January 12, 2021 Keywords: Asteroid, Comets, Homework Note: Course : Comets and Asteroids Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\),">
+<meta property="og:description" content="Tisserand Relation T_J Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-maj">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-29T06:59:22.507Z">
+<meta property="article:modified_time" content="2021-10-29T09:41:15.671Z">
 <meta property="article:author" content="Hsuan Lai">
 <meta name="twitter:card" content="summary">
 
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-10 14:59:22" itemprop="dateModified" datetime="2021-10-29T14:59:22+08:00">2021-10</time>
+                <time title="修改時間：2021-10 17:41:15" itemprop="dateModified" datetime="2021-10-29T17:41:15+08:00">2021-10</time>
               </span>
 
           
@@ -210,7 +210,6 @@
 
       
         <h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
-<p>Date: January 12, 2021 Keywords: Asteroid, Comets, Homework Note: Course : Comets and Asteroids</p>
 <p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
 <p><span class="math display">\[     C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\\]</span></p>
@@ -433,6 +432,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
