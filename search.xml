@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>post title</title>
-    <url>/2021/post-title/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
+    <title>Install the Linus system on Windows</title>
     <url>/2021/Install%20the%20Linus%20system%20on%20Windows/</url>
-    <content><![CDATA[<hr>
+    <content><![CDATA[<h1 id="Install-the-Linus-system-on-Windows"><a href="#Install-the-Linus-system-on-Windows" class="headerlink" title="Install the Linus system on Windows"></a>Install the Linus system on Windows</h1><p>Author: Hsuan-Ting Lai</p>
+<hr>
+<hr>
 <h1 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h1><h2 id="Step-1-啟用Windows-Linus-System"><a href="#Step-1-啟用Windows-Linus-System" class="headerlink" title="Step 1 啟用Windows Linus System"></a>Step 1 啟用Windows Linus System</h2><p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
 <p><img src="Install%20the%20Linus%20system%20on%20Windows/Untitled.png" alt="Untitled"></p>
 <p><img src="Install%20the%20Linus%20system%20on%20Windows/Untitled%201.png" alt="Untitled"></p>
@@ -84,5 +81,25 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>note</title>
+    <url>/2021/note-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>post title</title>
+    <url>/2021/post-title/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>note</title>
+    <url>/2021/note/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>2022_note</title>
+    <url>/2021/2022-note/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
