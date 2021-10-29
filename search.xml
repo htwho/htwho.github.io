@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>小行星的軌道參數</title>
+    <url>/2021/2022-note/</url>
+    <content><![CDATA[<h1 id="六個軌道參數的物理意義"><a href="#六個軌道參數的物理意義" class="headerlink" title="六個軌道參數的物理意義"></a>六個軌道參數的物理意義</h1><ul>
+<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
+<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
+<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
+<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>Install the Linus system on Windows</title>
-    <url>/2021/Install%20the%20Linus%20system%20on%20Windows/</url>
+    <url>/2021/LinuxonWin/</url>
     <content><![CDATA[<hr>
 <h1 id="中文版"><a href="#中文版" class="headerlink" title="中文版"></a>中文版</h1><h2 id="Step-1-啟用Windows-Linus-System"><a href="#Step-1-啟用Windows-Linus-System" class="headerlink" title="Step 1 啟用Windows Linus System"></a>Step 1 啟用Windows Linus System</h2><p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
 <p><img src="/.io//Untitled.png" alt="Untitled"></p>
@@ -60,17 +71,6 @@
 <p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
 <p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix ‘The WSL Optional Component is not Enabled. Please Enable it and Try again’ Error on Ubuntu? - Appuals.com</a></p>
 <p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here’s how.</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2022_note</title>
-    <url>/2021/2022-note/</url>
-    <content><![CDATA[<h1 id="六個軌道參數的物理意義"><a href="#六個軌道參數的物理意義" class="headerlink" title="六個軌道參數的物理意義"></a>六個軌道參數的物理意義</h1><ul>
-<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
-<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
-<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
-<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
