@@ -19,11 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>post title</title>
-    <url>/2021/post-title/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2021/Install%20the%20Linus%20system%20on%20Windows/</url>
     <content><![CDATA[<hr>
@@ -84,5 +79,10 @@
 <p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix ‘The WSL Optional Component is not Enabled. Please Enable it and Try again’ Error on Ubuntu? - Appuals.com</a></p>
 <p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here’s how.</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>post title</title>
+    <url>/2021/post-title/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
