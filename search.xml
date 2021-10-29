@@ -65,7 +65,13 @@
   <entry>
     <title>2022_note</title>
     <url>/2021/2022-note/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="六個軌道參數的物理意義"><a href="#六個軌道參數的物理意義" class="headerlink" title="六個軌道參數的物理意義"></a>六個軌道參數的物理意義</h1><ul>
+<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
+<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
+<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
+<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
