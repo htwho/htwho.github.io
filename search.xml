@@ -19,51 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>小行星的軌道參數</title>
-    <url>/2021/2022-note/</url>
-    <content><![CDATA[<h1 id="六個軌道參數的物理意義"><a href="#六個軌道參數的物理意義" class="headerlink" title="六個軌道參數的物理意義"></a>六個軌道參數的物理意義</h1><ul>
-<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
-<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
-<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
-<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Tisserand relation</title>
-    <url>/2021/Tisserand%20Relation%20T_J/</url>
-    <content><![CDATA[<h1 id="Tisserand-Relation-T-J"><a href="#Tisserand-Relation-T-J" class="headerlink" title="Tisserand Relation T_J"></a>Tisserand Relation T_J</h1><p>Date: January 12, 2021<br>Keywords: Asteroid, Comets, Homework<br>Note: Course : Comets and Asteroids</p>
-<p>Consider a comet is not close with initial semi-major $a$, eccentricity $e$, inclination $i$. After encountering Jupiter, the orbital element of the comet becomes semi-major $a’$, eccentricity $e’$, inclination $i’$</p>
-<p>From the Jacobi integral $C_J$, it remains constant value throughout the encounter with the masses $^{[3]}$.</p>
-<p>$$     C_J = 2V - v^2 \         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x’ y’ - x’ \dot y’) - ( \dot x’^2 + \dot y’^2 + \dot z’^2 )  \$$</p>
-<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun  $(M_j \sim 10^{-3}M_\odot)$, we take $\mu_1$ and $r_1$ as the unity.</p>
-<p>$$GM_\odot = \mu_1 = \mu$$</p>
-<p>$$ r_1 = r$$</p>
-<p>When the comet is not close to Jupiter, so that $\frac{\mu_2}{r_2}$ term is always small to neglect the $\mu_2$ term.</p>
-<p>$$\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}$$</p>
-<p>Where $\mu_2 = GM_J$, $r_2$ is the distance between Jupiter and the comet.</p>
-<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p>$$E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a} $$</p>
-<p>Here,  $G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu$, so we calculate the velocity</p>
-<p>$$v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})$$</p>
-<p>$$\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})$$</p>
-<p>For the angular momentum of the orbit</p>
-<p>$$        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \                = n\sqrt{a(1-e^2)\mu}                 = constant $$</p>
-<p>For the orbital energy,</p>
-<p>$$        E =  \vec h \cdot \vec n \        = h \cdot n \cos{i} \        = n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}$$</p>
-<p>the $z’$ component of $\vec h$ is given by</p>
-<p>$$ 2n(\dot x’ y’ - x’ \dot y’) =  h \cdot n \cos{i}$$</p>
-<p>So, Jocobi integral $C_J$ becomes</p>
-<p>$$   C_J = 2V - v^2 \         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x’ y’ - x’ \dot y’) - ( \dot x’^2 + \dot y’^2 + \dot z’^2 )  \         ~~~~ (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \        = \frac{2\mu}{r} + 2n(\dot x’ y’ - x’ \dot y’)- v^2 \         = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \        = \frac{\mu}{a} + 2h \cdot n \cos{i} \        = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} \         ~~~~ (\because n= 1) \        = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}$$</p>
-<p>$$C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant $$</p>
-<p>If the comet is not close to Jupiter, so that $\frac{1}{r_2}$ is always small to neglect the $\mu_2$ term in Equation \ref{eq34}, then we have</p>
-<p>$$ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant $$</p>
-<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p>$$T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a’} + \sqrt{a’(1-e’^2)\mu} \cdot \cos{i’} $$</p>
-<p>By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Install the Linus system on Windows</title>
     <url>/2021/LinuxonWin/</url>
     <content><![CDATA[<hr>
@@ -123,6 +78,51 @@
 <p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
 <p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix ‘The WSL Optional Component is not Enabled. Please Enable it and Try again’ Error on Ubuntu? - Appuals.com</a></p>
 <p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here’s how.</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Tisserand relation</title>
+    <url>/2021/Tisserand%20Relation%20T_J/</url>
+    <content><![CDATA[<h1 id="Tisserand-Relation-T-J"><a href="#Tisserand-Relation-T-J" class="headerlink" title="Tisserand Relation T_J"></a>Tisserand Relation T_J</h1><p>Date: January 12, 2021<br>Keywords: Asteroid, Comets, Homework<br>Note: Course : Comets and Asteroids</p>
+<p>Consider a comet is not close with initial semi-major $a$, eccentricity $e$, inclination $i$. After encountering Jupiter, the orbital element of the comet becomes semi-major $a’$, eccentricity $e’$, inclination $i’$</p>
+<p>From the Jacobi integral $C_J$, it remains constant value throughout the encounter with the masses $^{[3]}$.</p>
+<p>$$     C_J = 2V - v^2 \         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x’ y’ - x’ \dot y’) - ( \dot x’^2 + \dot y’^2 + \dot z’^2 )  \$$</p>
+<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun  $(M_j \sim 10^{-3}M_\odot)$, we take $\mu_1$ and $r_1$ as the unity.</p>
+<p>$$GM_\odot = \mu_1 = \mu$$</p>
+<p>$$ r_1 = r$$</p>
+<p>When the comet is not close to Jupiter, so that $\frac{\mu_2}{r_2}$ term is always small to neglect the $\mu_2$ term.</p>
+<p>$$\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}$$</p>
+<p>Where $\mu_2 = GM_J$, $r_2$ is the distance between Jupiter and the comet.</p>
+<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
+<p>$$E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a} $$</p>
+<p>Here,  $G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu$, so we calculate the velocity</p>
+<p>$$v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})$$</p>
+<p>$$\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})$$</p>
+<p>For the angular momentum of the orbit</p>
+<p>$$        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \                = n\sqrt{a(1-e^2)\mu}                 = constant $$</p>
+<p>For the orbital energy,</p>
+<p>$$        E =  \vec h \cdot \vec n \        = h \cdot n \cos{i} \        = n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}$$</p>
+<p>the $z’$ component of $\vec h$ is given by</p>
+<p>$$ 2n(\dot x’ y’ - x’ \dot y’) =  h \cdot n \cos{i}$$</p>
+<p>So, Jocobi integral $C_J$ becomes</p>
+<p>$$   C_J = 2V - v^2 \         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x’ y’ - x’ \dot y’) - ( \dot x’^2 + \dot y’^2 + \dot z’^2 )  \         ~~~~ (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \        = \frac{2\mu}{r} + 2n(\dot x’ y’ - x’ \dot y’)- v^2 \         = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \        = \frac{\mu}{a} + 2h \cdot n \cos{i} \        = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} \         ~~~~ (\because n= 1) \        = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}$$</p>
+<p>$$C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant $$</p>
+<p>If the comet is not close to Jupiter, so that $\frac{1}{r_2}$ is always small to neglect the $\mu_2$ term in Equation \ref{eq34}, then we have</p>
+<p>$$ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant $$</p>
+<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
+<p>$$T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a’} + \sqrt{a’(1-e’^2)\mu} \cdot \cos{i’} $$</p>
+<p>By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>小行星的軌道參數</title>
+    <url>/2021/2022-note/</url>
+    <content><![CDATA[<h1 id="六個軌道參數的物理意義"><a href="#六個軌道參數的物理意義" class="headerlink" title="六個軌道參數的物理意義"></a>六個軌道參數的物理意義</h1><ul>
+<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
+<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
+<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
+<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
+</ul>
 ]]></content>
   </entry>
 </search>
