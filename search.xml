@@ -17,6 +17,16 @@
 e=mc^2
 \end{equation}
 \]</span> 著名的质能方程 <span class="math inline">\(\eqref{eq.1}\)</span> 由爱因斯坦提出 ...</p>
+<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
+<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
+<p><span class="math display">\[
+C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{cj}
+\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{cj}\)</span> <span class="math display">\[
+GM_\odot = \mu_1 = \mu
+\]</span></p>
+<p><span class="math display">\[
+r_1 = r 
+\]</span></p>
 ]]></content>
   </entry>
   <entry>
