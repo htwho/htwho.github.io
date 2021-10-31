@@ -1,45 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>小行星的軌道參數</title>
-    <url>/2021/2022-note/</url>
-    <content><![CDATA[<h1 id="六個軌道參數的物理意義">六個軌道參數的物理意義</h1>
-<ul>
-<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
-<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
-<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
-<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
-</ul>
-<hr>
-<p>舉個例子</p>
-<p><span class="math display">\[\begin{equation}\label{eq1}
-e=mc^2
-\end{equation}\]</span></p>
-<p>著名的质能方程 <span class="math inline">\(\eqref{eq1}\)</span> 由爱因斯坦提出 ...</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Install the Linus system on Windows</title>
     <url>/2021/LinuxonWin/</url>
     <content><![CDATA[<hr>
 <h1 id="中文版">中文版</h1>
 <h2 id="step-1-啟用windows-linus-system">Step 1 啟用Windows Linus System</h2>
 <p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom:50%;"></p>
+<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
 <p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
 <p>安裝成功後，就可以在 Windows 選單找到 Ubuntu App</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%203.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%203.png" alt="Untitled" style="zoom:50%;"></p>
 <ul>
 <li><p><strong>啟動Ubuntu後卻發現出現錯誤訊息…..</strong></p>
 <figure>
@@ -135,6 +109,24 @@ e=mc^2
 <p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
 <p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix 'The WSL Optional Component is not Enabled. Please Enable it and Try again' Error on Ubuntu? - Appuals.com</a></p>
 <p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here's how.</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>小行星的軌道參數</title>
+    <url>/2021/2022-note/</url>
+    <content><![CDATA[<h1 id="六個軌道參數的物理意義">六個軌道參數的物理意義</h1>
+<ul>
+<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
+<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
+<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
+<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
+</ul>
+<hr>
+<p>舉個例子</p>
+<p><span class="math display">\[\begin{equation}\label{eq1}
+e=mc^2
+\end{equation}\]</span></p>
+<p>著名的质能方程 <span class="math inline">\(\eqref{eq1}\)</span> 由爱因斯坦提出 ...</p>
 ]]></content>
   </entry>
   <entry>
