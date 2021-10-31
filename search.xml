@@ -11,8 +11,9 @@
 <li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
 </ul>
 <hr>
-<p>舉個例子</p>
-<p><span class="math display">\[
+<h1 id="測試區">測試區</h1>
+<h4 id="看看能不能打出正常的數學公式.....">看看能不能打出正常的數學公式.....</h4>
+<p>舉個例子 <del>栗子🌰</del> <span class="math display">\[
 \begin{equation}\label{eq.1}
 e=mc^2
 \end{equation}
@@ -30,8 +31,8 @@ a &amp;= b + c \\
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
 <p><span class="math display">\[
 \begin{equation}\label{eq02}
-\begin{aligned}
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{cj}
+\begin{aligned} 
+C_J  &amp;= 2V - v^2 \\&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \label{cj}
 \end{aligned}
 \end{equation}
 \]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{eq02}\)</span></p>
@@ -48,13 +49,15 @@ r_1 = r
 ]]></content>
   </entry>
   <entry>
-    <title>Install the Linus system on Windows</title>
+    <title>Install the Linux system on Windows</title>
     <url>/2021/LinuxonWin/</url>
     <content><![CDATA[<hr>
 <h1 id="中文版">中文版</h1>
-<h2 id="step-1-啟用windows-linus-system">Step 1 啟用Windows Linus System</h2>
+<h2 id="step-1-啟用windows-linux-system">Step 1 啟用Windows Linux System</h2>
 <p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<p>​ <img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"> <img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
+<p>$U = mgh $</p>
+<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"></p>
+<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
 <p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
 <p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
@@ -206,6 +209,22 @@ T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + 
 <h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>test???</title>
+    <url>/2021/draft/</url>
+    <content><![CDATA[
+]]></content>
+      <tags>
+        <tag>paper</tag>
+        <tag>program</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>testpost</title>
+    <url>/2021/testpost/</url>
+    <content><![CDATA[
 ]]></content>
   </entry>
 </search>

@@ -28,7 +28,7 @@
 <meta property="og:description" content="六個軌道參數的物理意義  semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小; 而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置; 最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-10-29T06:04:35.000Z">
-<meta property="article:modified_time" content="2021-10-31T09:39:10.907Z">
+<meta property="article:modified_time" content="2021-10-31T09:47:15.624Z">
 <meta property="article:author" content="Hsuan Lai">
 <meta name="twitter:card" content="summary">
 
@@ -189,7 +189,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-10 14:04:35 / 修改時間：17:39:10" itemprop="dateCreated datePublished" datetime="2021-10-29T14:04:35+08:00">2021-10</time>
+              <time title="創建時間：2021-10 14:04:35 / 修改時間：17:47:15" itemprop="dateCreated datePublished" datetime="2021-10-29T14:04:35+08:00">2021-10</time>
             </span>
 
           
@@ -211,8 +211,9 @@
 <li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
 </ul>
 <hr>
-<p>舉個例子</p>
-<p><span class="math display">\[
+<h1 id="測試區">測試區</h1>
+<h4 id="看看能不能打出正常的數學公式.....">看看能不能打出正常的數學公式.....</h4>
+<p>舉個例子 <del>栗子🌰</del> <span class="math display">\[
 \begin{equation}\label{eq.1}
 e=mc^2
 \end{equation}
@@ -230,8 +231,8 @@ a &amp;= b + c \\
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
 <p><span class="math display">\[
 \begin{equation}\label{eq02}
-\begin{aligned}
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{cj}
+\begin{aligned} 
+C_J  &amp;= 2V - v^2 \\&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \label{cj}
 \end{aligned}
 \end{equation}
 \]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{eq02}\)</span></p>
@@ -263,7 +264,10 @@ r_1 = r
     <a href="/2021/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/draft/" rel="next" title="test???">
+      test??? <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -332,7 +336,7 @@ r_1 = r
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%80%8B%E8%BB%8C%E9%81%93%E5%8F%83%E6%95%B8%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E7%BE%A9"><span class="nav-number">1.</span> <span class="nav-text">六個軌道參數的物理意義</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E5%80%8B%E8%BB%8C%E9%81%93%E5%8F%83%E6%95%B8%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E7%BE%A9"><span class="nav-number">1.</span> <span class="nav-text">六個軌道參數的物理意義</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6%E5%8D%80"><span class="nav-number">2.</span> <span class="nav-text">測試區</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9C%8B%E7%9C%8B%E8%83%BD%E4%B8%8D%E8%83%BD%E6%89%93%E5%87%BA%E6%AD%A3%E5%B8%B8%E7%9A%84%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F....."><span class="nav-number">2.0.0.1.</span> <span class="nav-text">看看能不能打出正常的數學公式.....</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -346,9 +350,13 @@ r_1 = r
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">標籤</span>
       </div>
   </nav>
 </div>
