@@ -7,8 +7,7 @@
 <h1 id="中文版">中文版</h1>
 <h2 id="step-1-啟用windows-linus-system">Step 1 啟用Windows Linus System</h2>
 <p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom:50%;"></p>
-<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
+<p>​ <img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"> <img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
 <p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
 <p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
@@ -60,20 +59,14 @@
 <li>Scroll down and select “<strong>Windows Subsystem for Linux</strong>“</li>
 <li>6.<strong>Click</strong> on “<strong>OK</strong>” to enable the feature.</li>
 </ol>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2011.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2012.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%2011.png" alt="Untitled" style="zoom:50%;"></p>
+<p><img src="/2021/LinuxonWin/Untitled%2012.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-install-ubuntu">Step 2 Install Ubuntu</h2>
 <ol type="1">
 <li>Open the <strong>Microsoft Store</strong> from the Start menu, and search for “<strong>Ubuntu</strong>” in the store</li>
 <li>To install , click it, and then click the “Get” or “Install” button to install it like any other Store application.</li>
 </ol>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2013.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%2013.png" alt="Untitled" style="zoom:67%;"></p>
 <h2 id="step-3-turning-wsl-on-through-powershell">Step 3 Turning WSL ON Through PowerShell</h2>
 <ol type="1">
 <li><p>Search for PowerShell, right-click the top result, and select the <strong>Run as administrator option.</strong></p></li>
@@ -87,23 +80,15 @@
 <h2 id="step-4-open-ubuntu">Step 4 Open Ubuntu</h2>
 <ol type="1">
 <li><p>Open Start, and click it .</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2015.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure></li>
+<p><img src="/2021/LinuxonWin/Untitled%2015.png" alt="Untitled" style="zoom:50%;"></p></li>
 </ol>
 <p><strong>It works!</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2016.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%2016.png" alt="Untitled" style="zoom:50%;"></p>
 <h2 id="step-5-update">Step 5 Update</h2>
 <p>This is the first time you are using your system after installing, you should run the update command: <code>sudo apt-get update</code></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%209.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%209.png" alt="Untitled" style="zoom: 67%;"></p>
 <p><strong>Done!</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2010.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%2010.png" alt="Untitled" style="zoom:67%;"></p>
 <h1 id="references">References</h1>
 <p><a href="https://medium.com/@misscoming/%E5%9C%A8-windows-10-%E4%B8%8A%E8%B7%91-ubuntu-18-04-92f80b2d725b">在 Windows 10 上跑 Ubuntu 18.04</a></p>
 <p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
@@ -135,18 +120,28 @@ e=mc^2
     <content><![CDATA[<h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
 <p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[     C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\\]</span></p>
-<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity.</p>
-<p><span class="math display">\[GM_\odot = \mu_1 = \mu\]</span></p>
-<p><span class="math display">\[ r_1 = r\]</span></p>
+<p><span class="math display">\[
+C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
+\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
+GM_\odot = \mu_1 = \mu
+\]</span></p>
+<p><span class="math display">\[
+r_1 = r 
+\]</span></p>
 <p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
 <p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
 <p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
 <p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p><span class="math display">\[E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a} \]</span></p>
+<p><span class="math display">\[
+E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
+\]</span></p>
 <p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
-<p><span class="math display">\[v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})\]</span></p>
-<p><span class="math display">\[\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})\]</span></p>
+<p><span class="math display">\[
+v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
+\]</span></p>
+<p><span class="math display">\[
+\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
+\]</span></p>
 <p>For the angular momentum of the orbit</p>
 <p><span class="math display">\[        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant \]</span></p>
 <p>For the orbital energy,</p>
@@ -159,8 +154,10 @@ e=mc^2
 <p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
 <p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
 <p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p><span class="math display">\[T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \]</span></p>
-<p>By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter.</p>
+<p><span class="math display">\[
+T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
+\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
+<p>$  $</p>
 ]]></content>
   </entry>
   <entry>

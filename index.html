@@ -338,7 +338,7 @@ e=mc^2
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-10 00:00:00 / 修改時間：16:59:30" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10</time>
+              <time title="創建時間：2021-10 00:00:00 / 修改時間：17:26:16" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10</time>
             </span>
 
           
@@ -356,12 +356,12 @@ e=mc^2
 <h1 id="中文版">中文版</h1>
 <h2 id="step-1-啟用windows-linus-system">Step 1 啟用Windows Linus System</h2>
 <p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom:50%;"></p>
-<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
+<p>​ <img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"> <img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
 <p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
 <p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
 <p>安裝成功後，就可以在 Windows 選單找到 Ubuntu App</p>
+<p><img src="/2021/LinuxonWin/Untitled%203.png" alt="Untitled" style="zoom:50%;"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/LinuxonWin/#more" rel="contents">
@@ -419,7 +419,7 @@ e=mc^2
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-10 17:41:15" itemprop="dateModified" datetime="2021-10-29T17:41:15+08:00">2021-10</time>
+                <time title="修改時間：2021-10 17:21:29" itemprop="dateModified" datetime="2021-10-31T17:21:29+08:00">2021-10</time>
               </span>
 
           
@@ -436,13 +436,21 @@ e=mc^2
           <h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
 <p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[     C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\\]</span></p>
-<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity.</p>
-<p><span class="math display">\[GM_\odot = \mu_1 = \mu\]</span></p>
-<p><span class="math display">\[ r_1 = r\]</span></p>
+<p><span class="math display">\[
+C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
+\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
+GM_\odot = \mu_1 = \mu
+\]</span></p>
+<p><span class="math display">\[
+r_1 = r 
+\]</span></p>
 <p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
 <p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
 <p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
+<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
+<p><span class="math display">\[
+E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
+\]</span></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/Tisserand%20Relation%20T_J/#more" rel="contents">
