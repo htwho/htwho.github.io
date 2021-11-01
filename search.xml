@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello test</title>
+    <url>/2021/test01/</url>
+    <content><![CDATA[<h1 id="hello-你好嗎">Hello, 你好嗎？</h1>
+<h2 id="衷心感謝珍重再見期待再相逢">衷心感謝，珍重再見，期待再相逢～</h2>
+]]></content>
+  </entry>
+  <entry>
     <title>小行星的軌道參數</title>
     <url>/2021/2022-note/</url>
     <content><![CDATA[<h1 id="六個軌道參數的物理意義">六個軌道參數的物理意義</h1>
@@ -209,22 +216,6 @@ T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + 
 <h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>test???</title>
-    <url>/2021/draft/</url>
-    <content><![CDATA[
-]]></content>
-      <tags>
-        <tag>paper</tag>
-        <tag>program</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>testpost</title>
-    <url>/2021/testpost/</url>
-    <content><![CDATA[
 ]]></content>
   </entry>
 </search>
