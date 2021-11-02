@@ -49,6 +49,66 @@ r_1 = r
 ]]></content>
   </entry>
   <entry>
+    <title>Tisserand relation</title>
+    <url>/2021/Tisserand%20Relation%20T_J/</url>
+    <content><![CDATA[<h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
+<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
+<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
+<p><span class="math display">\[
+C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
+\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
+GM_\odot = \mu_1 = \mu
+\]</span></p>
+<p><span class="math display">\[
+r_1 = r 
+\]</span></p>
+<p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
+<p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
+<p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
+<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
+<p><span class="math display">\[
+E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
+\]</span></p>
+<p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
+<p><span class="math display">\[
+v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
+\]</span></p>
+<p><span class="math display">\[
+\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
+\]</span></p>
+<p>For the angular momentum of the orbit</p>
+<p><span class="math display">\[        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant \]</span></p>
+<p>For the orbital energy,</p>
+<p><span class="math display">\[        E =  \vec h \cdot \vec n \\        = h \cdot n \cos{i} \\        = n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}\]</span></p>
+<p>the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
+<p><span class="math display">\[ 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}\]</span></p>
+<p>So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
+<p><span class="math display">\[
+C_J = 2V - v^2
+&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
+&amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
+&amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
+&amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
+&amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
+&amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
+&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}
+\]</span></p>
+<p><span class="math display">\[
+C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
+\]</span></p>
+<p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
+<p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
+<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
+<p><span class="math display">\[
+T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
+\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
+<p><span class="math display">\[
+\displaylines{x+y\\y+z} 
+\]</span><br>
+</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Install the Linux system on Windows</title>
     <url>/2021/LinuxonWin/</url>
     <content><![CDATA[<hr>
@@ -144,66 +204,6 @@ r_1 = r
 <p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
 <p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix 'The WSL Optional Component is not Enabled. Please Enable it and Try again' Error on Ubuntu? - Appuals.com</a></p>
 <p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here's how.</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Tisserand relation</title>
-    <url>/2021/Tisserand%20Relation%20T_J/</url>
-    <content><![CDATA[<h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
-<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
-<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
-GM_\odot = \mu_1 = \mu
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r 
-\]</span></p>
-<p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
-<p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
-<p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
-<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p><span class="math display">\[
-E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
-\]</span></p>
-<p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
-<p><span class="math display">\[
-v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
-\]</span></p>
-<p><span class="math display">\[
-\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
-\]</span></p>
-<p>For the angular momentum of the orbit</p>
-<p><span class="math display">\[        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant \]</span></p>
-<p>For the orbital energy,</p>
-<p><span class="math display">\[        E =  \vec h \cdot \vec n \\        = h \cdot n \cos{i} \\        = n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}\]</span></p>
-<p>the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
-<p><span class="math display">\[ 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}\]</span></p>
-<p>So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
-<p><span class="math display">\[
-C_J = 2V - v^2
-&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
-&amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
-&amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
-&amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
-&amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
-&amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
-&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}
-\]</span></p>
-<p><span class="math display">\[
-C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
-\]</span></p>
-<p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
-<p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
-<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p><span class="math display">\[
-T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
-\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
-<p><span class="math display">\[
-\displaylines{x+y\\y+z} 
-\]</span><br>
-</p>
 ]]></content>
   </entry>
   <entry>
