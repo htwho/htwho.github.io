@@ -28,7 +28,7 @@
 <meta property="og:description" content="Tisserand Relation T_J Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-maj">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-02T09:21:20.896Z">
+<meta property="article:modified_time" content="2021-11-03T02:55:36.036Z">
 <meta property="article:author" content="Hsuan Lai">
 <meta name="twitter:card" content="summary">
 
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-11 17:21:20" itemprop="dateModified" datetime="2021-11-02T17:21:20+08:00">2021-11</time>
+                <time title="修改時間：2021-11 10:55:36" itemprop="dateModified" datetime="2021-11-03T10:55:36+08:00">2021-11</time>
               </span>
 
           
@@ -229,27 +229,32 @@ E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}
 \]</span></p>
 <p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
 <p><span class="math display">\[
-v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
+v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a}) 
+\\ \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
 \]</span></p>
-<p><span class="math display">\[
-\implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
-\]</span></p>
+<p>$$</p>
+<p>$$</p>
 <p>For the angular momentum of the orbit</p>
-<p><span class="math display">\[        \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant \]</span></p>
-<p>For the orbital energy,</p>
-<p><span class="math display">\[        E =  \vec h \cdot \vec n \\        = h \cdot n \cos{i} \\        = n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}\]</span></p>
-<p>the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
-<p><span class="math display">\[ 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}\]</span></p>
-<p>So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
 <p><span class="math display">\[
-C_J = 2V - v^2
+ \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant 
+\]</span> $$</p>
+<p>For the orbital energy,</p>
+<p><span class="math display">\[
+E = \vec h \cdot \vec n \\  &amp;= h \cdot n \cos{i} 
+   \\   &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
+\]</span> the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
+<p><span class="math display">\[
+2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}
+\]</span> So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
+<p><span class="math display">\[
+C_J &amp;= 2V - v^2 \\
 &amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
 &amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
 &amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
 &amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
 &amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
 &amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
-&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}
+&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i} 
 \]</span></p>
 <p><span class="math display">\[
 C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
@@ -262,8 +267,7 @@ T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + 
 \]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
 <p><span class="math display">\[
 \displaylines{x+y\\y+z} 
-\]</span><br>
-</p>
+\]</span></p>
 
     </div>
 
