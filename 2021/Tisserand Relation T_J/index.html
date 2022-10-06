@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"htwho.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Tisserand Relation T_J Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-maj">
+  <meta name="description" content="Tisserand Relation Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-major \">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tisserand relation">
+<meta property="og:title" content="The Restricted Three-Body Problem Part 2">
 <meta property="og:url" content="https://htwho.github.io/2021/Tisserand%20Relation%20T_J/index.html">
 <meta property="og:site_name" content="Blue box">
-<meta property="og:description" content="Tisserand Relation T_J Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-maj">
+<meta property="og:description" content="Tisserand Relation Consider a comet is not close with initial semi-major \(a\), eccentricity \(e\), inclination \(i\). After encountering Jupiter, the orbital element of the comet becomes semi-major \">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-01-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-06T17:24:50.405Z">
+<meta property="article:modified_time" content="2022-10-06T18:54:41.170Z">
 <meta property="article:author" content="Hsuan Lai">
 <meta name="twitter:card" content="summary">
 
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Tisserand relation | Blue box</title>
+  <title>The Restricted Three-Body Problem Part 2 | Blue box</title>
   
 
 
@@ -178,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Tisserand relation
+          The Restricted Three-Body Problem Part 2
         </h1>
 
         <div class="post-meta">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2022-10 01:24:50" itemprop="dateModified" datetime="2022-10-07T01:24:50+08:00">2022-10</time>
+                <time title="修改時間：2022-10 02:54:41" itemprop="dateModified" datetime="2022-10-07T02:54:41+08:00">2022-10</time>
               </span>
 
           
@@ -209,65 +209,90 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
+        <h1 id="tisserand-relation">Tisserand Relation</h1>
 <p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
 <p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
-GM_\odot = \mu_1 = \mu
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r 
-\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq34}
+\begin{split}
+     C_J &amp;= 2V - v^2 \\
+         &amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\
+\end{split}
+\end{equation}\]</span></p>
+<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[\begin{equation} \label{eq28.1}
+    GM_\odot = \mu_1 = \mu 
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq28.1}
+    r_1 = r
+\end{equation}\]</span></p>
 <p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
-<p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq28.2}
+    \frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}
+\end{equation}\]</span></p>
 <p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
 <p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p><span class="math display">\[
-E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
-\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq27}
+\begin{split}
+     E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a} 
+\end{split}
+\end{equation}\]</span></p>
 <p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
-<p><span class="math display">\[
-v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a}) 
-\\ \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
-\]</span></p>
-<p>$$</p>
-<p>$$</p>
-<p>For the angular momentum of the orbit</p>
-<p><span class="math display">\[
- \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant 
-\]</span> $$</p>
-<p>For the orbital energy,</p>
-<p><span class="math display">\[
-E = \vec h \cdot \vec n \\  &amp;= h \cdot n \cos{i} 
-   \\   &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
-\]</span> the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
-<p><span class="math display">\[
-2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}
-\]</span> So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
-<p><span class="math display">\[
-C_J &amp;= 2V - v^2 \\
-&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
-&amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
-&amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
-&amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
-&amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
-&amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
-&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i} 
-\]</span></p>
-<p><span class="math display">\[
-C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
-\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq28}
+\begin{split}
+     v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
+\end{split}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq30}
+    \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
+\end{equation}\]</span></p>
+<p>FoFor the angular momentum of the orbit <span class="math display">\[\begin{equation} \label{eq31}
+\begin{split}
+        \vec{h} &amp;= \vec{r} \times \vec{\dot r} \\
+                &amp;= n\sqrt{a(1-e^2)GM} \\
+                &amp;= n\sqrt{a(1-e^2)\mu} \\
+                &amp;= constant 
+\end{split}
+\end{equation}\]</span></p>
+<p>For the orbital energy, <span class="math display">\[\begin{equation} \label{eq32}
+\begin{split}
+        E &amp;=  \vec h \cdot \vec n \\
+        &amp;= h \cdot n \cos{i} \\
+        &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
+\end{split}
+\end{equation}\]</span></p>
+<p>the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by <span class="math display">\[\begin{equation} \label{eq33}
+        2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i} 
+\end{equation}\]</span></p>
+<p>So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes <span class="math display">\[\begin{equation} \label{eq34}
+\begin{split}
+     C_J &amp;= 2V - v^2 \\
+         &amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\
+        &amp; ~~~~ (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\
+        &amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\ 
+        &amp;= \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\
+        &amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\
+        &amp;= \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} \\
+        &amp; ~~~~ (\because n= 1) \\
+        &amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq35}
+        C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant 
+\end{equation}\]</span></p>
 <p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
-<p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
-<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p><span class="math display">\[
-T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
-\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
-<p><span class="math display">\[
-\displaylines{x+y\\y+z} 
-\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq36}
+         T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant 
+\end{equation}\]</span></p>
+<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by <span class="math display">\[\begin{equation} \label{eq37}
+         T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;}    
+\end{equation}\]</span></p>
+<p>By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li><a target="_blank" rel="noopener" href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
+<li><a target="_blank" rel="noopener" href="https://core.ac.uk/download/pdf/157747722.pdf">The circular restricted three-body problem. Carlo Nipoti, Dipartimento di Fisica e Astronomia, Universit`a di Bologna</a></li>
+<li><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec18.pdf">Lecture L18 - Exploring the Neighborhood: the Restricted Three-Body Problem</a></li>
+<li><a target="_blank" rel="noopener" href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem/">The restricted three-body problem (1): Equation of motion, The Jacobi Integral, and The Tisserand Relation</a></li>
+<li><a target="_blank" rel="noopener" href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem2/">The restricted three-body problem (2): Lagrangian points and the stability analysis</a></li>
+</ol>
 
     </div>
 
@@ -355,7 +380,7 @@ T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + 
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tisserand-relation-t_j"><span class="nav-number">1.</span> <span class="nav-text">Tisserand Relation T_J</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tisserand-relation"><span class="nav-number">1.</span> <span class="nav-text">Tisserand Relation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">1.1.</span> <span class="nav-text">References</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -1,51 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>小行星的軌道參數</title>
+    <title>The Restricted Three-Body Problem Part 1</title>
     <url>/2021/2022-note/</url>
-    <content><![CDATA[<h1 id="六個軌道參數的物理意義">六個軌道參數的物理意義</h1>
-<ul>
-<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
-<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
-<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
-<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
-</ul>
-<hr>
-<h1 id="測試區">測試區</h1>
-<h4 id="看看能不能打出正常的數學公式.....">看看能不能打出正常的數學公式.....</h4>
-<p>舉個例子 <del>栗子🌰</del> <span class="math display">\[
-\begin{equation}\label{eq.1}
-e=mc^2
-\end{equation}
-\]</span> 著名的质能方程 <span class="math inline">\(\eqref{eq.1}\)</span> 由爱因斯坦提出 ...</p>
-<p>对于多行公式，在 <code>equation</code> 环境中，你可以使用 <code>aligned</code> 环境把公式分成多行，</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq.2}
-\begin{aligned}
-a &amp;= b + c \\
-  &amp;= d + e + f + g \\
-  &amp;= h + i
-\end{aligned}
-\end{equation}
-\]</span> Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
-<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq02}
-\begin{aligned} 
-C_J  &amp;= 2V - v^2 \\&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \label{cj}
-\end{aligned}
-\end{equation}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{eq02}\)</span></p>
-<p>$ <span class="math display">\[
-\begin{equation}
-\begin{aligned}
-        GM_\odot = \mu_1 = \mu
-\end{aligned}
-\end{equation}
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r
-\]</span></p>
+    <content><![CDATA[<!-- 
+
+# 六個軌道參數的物理意義
+- semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;
+- 而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;
+- 最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。
+- mean anomaly 則用來描述該天體某時間點(t0)的位置。
+
+--- -->
+<h1 id="introduction">Introduction</h1>
+<p>Consider two of the bodies move in a circular orbit with the same angular velocity, and they have a common of mass and a constant distance. Compared with the other two objects, the mass of the third body is negligible and taken as a massless small body (i.e. asteroids or satellite)<span class="math inline">\(^{[3]}\)</span>. Then, the motion of the third body is subject to the gravitational influence of two masses, but the third body can't affect the motion of two masses. This is called <strong>the restricted three-body problem</strong>.</p>
+<p>The general restricted three-body problem is complex and chaotic, even small changes in initial conditions lead to a widely different result. Therefore, the solution must be obtained by numerical analysis. In application, it's used for space missions, such as a spacecraft moving to planets, or from Earth to the moon<span class="math inline">\(^{[3]}\)</span>. The mass of a small spacecraft is affected by planets and satellites of the planet, but the planets don't feel the gravitational force from a small spacecraft apparently<span class="math inline">\(^{[3]}\)</span>.</p>
+<p>Let define the unit of mass in this system <span class="math display">\[\begin{equation} \label{eq1.1}
+\mu = G (m_1 + m_2)
+\end{equation}\]</span></p>
+<p>Then the two mass are <span class="math display">\[\begin{equation} \label{eq1.2}
+\mu_1 = G m_1= \frac{m_1}{m_1+m_2}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq1.3}
+\mu_2 =\bar\mu = G m_2= \frac{m_2}{m_1+m_2}
+\end{equation}\]</span></p>
+<p>Set of axes <span class="math inline">\((x, y, z)\)</span> in the inertial coordinate frame referred to the centre of mass between <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span>. Therefore, the position of the two masses in the inertial frame are <span class="math inline">\((x_1, y_1, z_1)\)</span> and <span class="math inline">\((x_2, y_2, z_2)\)</span> (see Figure ). The unit of length is the constant distance between the two masses. And the inertial frame follows the constant angular velocity with mean motion <span class="math inline">\(n\)</span>.</p>
+<p>The equation of motion of the particle at the point <span class="math inline">\(P\)</span> in the inertial frame are <span class="math display">\[\begin{equation} \label{eq1} % the label is used to reference the equation
+\ddot x&#39; = \mu_1 \cdot \frac{(x_1&#39; - x&#39;)}{r_1^{3}} + \mu_2 \cdot \frac{(x_2&#39; - x&#39;)}{r_2^{3}}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq2}
+\ddot y&#39; = \mu_1 \cdot \frac{(y_1&#39; - y&#39;)}{r_1^{3}} + \mu_2 \cdot \frac{(y_2&#39; - y&#39;)}{r_2^{3}}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq3}
+\ddot z&#39; = \mu_1 \cdot \frac{(z_1&#39; - z&#39;)}{r_1^{3}} + \mu_2 \cdot \frac{(z_2&#39; - z&#39;)}{r_2^{3}}
+\end{equation}\]</span></p>
+<p>The distance in the inertial frame represents as following, <span class="math display">\[\begin{equation} \label{eq4}
+r_1^2 = (x_1&#39; - x&#39;)^2 + (y_1&#39; - y&#39;)^2 + (z_1&#39; - z&#39;)^2 
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq5}
+r_2^2 = (x_2&#39; - x&#39;)^2 + (y_2&#39; - y&#39;)^2 + (z_2&#39; - z&#39;)^2 
+\end{equation}\]</span></p>
+<p>Now, considering a new rotating coordinate system (see Figure ) has the same origin as the inertial frame, set of axes <span class="math inline">\((x&#39;, y&#39;, z&#39;)\)</span>, the position of two masses are <span class="math display">\[\begin{align*}
+(x_1, y_1, z_1) = (-\mu_2, 0, 0) \\
+(x_2, y_2, z_2) = (\mu_1, 0, 0)
+\end{align*}\]</span></p>
+<p>Therefore, the distances in Equation~ and Equation~ can be rewritten as in term of the rotating coordinate system <span class="math display">\[\begin{equation} \label{eq6}
+\begin{split}
+ r_1^2&amp; = (x_1&#39; - x)^2 + (y_1&#39; - y)^2 + (z_1&#39; - z)^2 \\
+       &amp;= (-\mu_2 - x)^2 + y^2 + z^2 \\
+       &amp;= (x + \mu_2)^2 + y^2 + z^2 
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq7}
+\begin{split}
+r_2^2&amp; = (x_2&#39; - x)^2 + (y_2&#39; - y)^2 + (z_2&#39; - z)^2 \\
+    &amp;= (\mu_1-x)^2 + y^2 + z^2 \\
+    &amp;= (x - \mu_1 )^2 + y^2 + z^2
+\end{split}
+\end{equation}\]</span></p>
+<p>NOTE:<br>
+&gt; <span class="math inline">\(x, y\)</span>, and <span class="math inline">\(z \Rightarrow\)</span> the inertial (sidereal) coordinate system<br>
+&gt; <span class="math inline">\(x&#39;, y&#39;\)</span>, and $ z' $ the rotating (synodic) coordinate system</p>
+<p>The relation between the inertial and the rotating coordinate system can be expressed as a matrix form. The rotating system is related to the inertial system by the simple rotation.</p>
+<p><span class="math display">\[\begin{equation} \label{eq8}
+\begin{bmatrix}
+x&#39; \\y&#39; \\z&#39;
+\end{bmatrix} =
+\begin{bmatrix}
+\cos{nt} &amp; -\sin{nt} &amp; 0 \\
+\sin{nt} &amp; \cos{nt} &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\y \\z
+\end{bmatrix}
+\end{equation}\]</span></p>
+<p>Equation  becomes <span class="math display">\[\begin{equation} \label{eq8.1}
+\begin{split}
+    x&#39; = x \cos{nt} - y \sin{nt}
+\end{split}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq8.2}
+\begin{split}
+    y&#39; = x \sin{nt} + y \cos{nt}
+\end{split}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq8.3}
+\begin{split}
+    z&#39; = z
+\end{split}
+\end{equation}\]</span></p>
+<p>Then, differentiate <span class="math inline">\(x&#39;, y&#39;\)</span>, and <span class="math inline">\(z&#39;\)</span> <span class="math display">\[\begin{equation} \label{eq9}
+\begin{bmatrix}
+    \dot x&#39; \\\dot y&#39; \\\dot z&#39;
+\end{bmatrix} =
+\begin{bmatrix}
+    \cos{nt} &amp; -\sin{nt} &amp; 0 \\
+    \sin{nt} &amp; \cos{nt} &amp; 0 \\
+    0 &amp; 0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+    \dot{x} -ny \\ \dot{y}+nx \\ \dot z
+\end{bmatrix}
+\end{equation}\]</span></p>
+<p>Equation  becomes <span class="math display">\[\begin{equation} \label{eq9.1}
+\begin{split}
+    \dot x&#39; &amp;= \dot x \cos{nt} + xn (-\sin{nt}) - \dot y \cos{nt} - yn\cos{nt} \\
+         &amp;= \cos{nt}\cdot (\dot x -ny) - \sin{nt} \cdot (\dot y + nx)
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq9.2}
+\begin{split}
+    \dot y&#39; &amp;= \dot x \sin{nt} + xn(-\cos{nt}) + \dot y \cos{nt} + yn(-\sin{nt}) \\
+         &amp;= \sin{nt}\cdot (\dot x -ny) + \cos{nt}\cdot (\dot y + nx)
+\end{split}
+\end{equation}\]</span></p>
+<h1 id="references">References</h1>
+<ol type="1">
+<li><a href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
+<li><a href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
+<li><a href="https://core.ac.uk/download/pdf/157747722.pdf">The circular restricted three-body problem. Carlo Nipoti, Dipartimento di Fisica e Astronomia, Universit`a di Bologna</a></li>
+<li><a href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec18.pdf">Lecture L18 - Exploring the Neighborhood: the Restricted Three-Body Problem</a></li>
+<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem/">The restricted three-body problem (1): Equation of motion, The Jacobi Integral, and The Tisserand Relation</a></li>
+<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem2/">The restricted three-body problem (2): Lagrangian points and the stability analysis</a></li>
+</ol>
 ]]></content>
       <tags>
         <tag>Asteroids</tag>
@@ -134,169 +206,108 @@ r_1 = r
       </tags>
   </entry>
   <entry>
-    <title>Tisserand relation</title>
-    <url>/2021/Tisserand%20Relation%20T_J/</url>
-    <content><![CDATA[<h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
-<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
-<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
-GM_\odot = \mu_1 = \mu
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r 
-\]</span></p>
-<p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
-<p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
-<p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
-<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p><span class="math display">\[
-E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
-\]</span></p>
-<p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
-<p><span class="math display">\[
-v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a}) 
-\\ \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
-\]</span></p>
-<p>$$</p>
-<p>$$</p>
-<p>For the angular momentum of the orbit</p>
-<p><span class="math display">\[
- \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant 
-\]</span> $$</p>
-<p>For the orbital energy,</p>
-<p><span class="math display">\[
-E = \vec h \cdot \vec n \\  &amp;= h \cdot n \cos{i} 
-   \\   &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
-\]</span> the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
-<p><span class="math display">\[
-2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}
-\]</span> So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
-<p><span class="math display">\[
-C_J &amp;= 2V - v^2 \\
-&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
-&amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
-&amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
-&amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
-&amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
-&amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
-&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i} 
-\]</span></p>
-<p><span class="math display">\[
-C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
-\]</span></p>
-<p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
-<p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
-<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p><span class="math display">\[
-T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
-\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
-<p><span class="math display">\[
-\displaylines{x+y\\y+z} 
-\]</span></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Lagrangian Equilibrium Pointslargrange_points</title>
+    <title>The Restricted Three-Body Problem Part 3</title>
     <url>/2022/largrange-points/</url>
     <content><![CDATA[<h1 id="lagrangian-equilibrium-points">Lagrangian Equilibrium Points</h1>
 <p>Looking for the equilibrium points in the rotating coordinate frame, so that its position with respect to the two masses keep from a constant distance.</p>
 <p>The equation of the motion in the rotating frame are these equations by moving the centrifugal term (<span class="math inline">\(n^2x\)</span> and <span class="math inline">\(n^2y\)</span> ) to the right-hand side of equation.</p>
 <p><span class="math inline">\(x\)</span>-direction:</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq38.1}
 (\ddot x  -2n\dot y ) = \frac{\partial{V}}{\partial{x}}= - [ \mu_1 \frac{(\mu_2+x)}{r_1^{3}} + \mu_2 \frac{(x-\mu_1)}{r_2^{3}} ] + n^2x
-\]</span> </p>
+\end{equation}\]</span></p>
 <p><span class="math inline">\(y\)</span>-direction:</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq38.2}
  (\ddot y + 2n \dot x )= \frac{\partial{V}}{\partial{y}}= (\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} )\cdot y + n^2y
+\end{equation}
 \]</span> </p>
 <p><span class="math inline">\(z\)</span>-direction:</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq38.3}
 \ddot z = \frac{\partial{V}}{\partial{z}}= - (\frac{\mu_1}{r_1^{3}} +  \frac{\mu_2}{r_2^{3}} )\cdot 
+\end{equation}
 \]</span> </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq39}
 V(r) = V(x, y, z) \\            = \frac{n^2}{2}(x^2+y^2) + \frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}
+\end{equation}
 \]</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq40.1}
  r_1^2 = (x_1-x)^2 + y^2 + z^2 \\            = (\mu_2+x)^2 + y^2 + z^2
+\end{equation}
 \]</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}\label{eq40.2}
  r_2^2 = (x_1-x)^2 + y^2 + z^2 \\             = (x-\mu_1)^2 + y^2 + z^2
-\]</span></p>
-<p>where <span class="math inline">\(\mu_1=Gm_1=\frac{m_1}{m_1+m_2}\)</span> <span class="math inline">\(\mu_2=\bar{\mu}=Gm_1=\frac{m_2}{m_1+m_2}\)</span></p>
+ \end{equation}\]</span></p>
+<p>where<br>
+<span class="math inline">\(\mu_1=Gm_1=\frac{m_1}{m_1+m_2}\)</span></p>
+<p><span class="math inline">\(\mu_2=\bar{\mu}=Gm_1=\frac{m_2}{m_1+m_2}\)</span></p>
 <p><span class="math inline">\(\mu_1 + \mu_2 = 1\)</span></p>
 <p>Here, mean motion n is taken as unity <span class="math inline">\((n=1)\)</span></p>
 <p>The velocity of equilibrium points would be</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \dot x = \dot y =\dot z = \ddot x = \ddot y =\ddot z = 0
-\]</span></p>
+\end{equation}\]</span></p>
 <p>From Equation , we must have <span class="math inline">\(z=0\)</span> for the equilibrium points, thus, the equilibrium points are in the orbital plane of two masses. Therefore, based on Equation , Equation  and Equation  becomes</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  \frac{\partial{V}}{\partial{x}} = 0 = -[ \mu_1 \frac{(\mu_2+x)}{r_1^{3}} + \mu_2 \frac{(x-\mu_1)}{r_2^{3}} ] + x
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
  \frac{\partial{V}}{\partial{y}} = 0 = (\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} )\cdot y + y 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Where <span class="math inline">\(r_1= (\mu_2+1)^2 + y^2, r_2= (x-\mu_1)^2 + y^2\)</span> Equation  for y-direction is rewritten as</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 y \cdot [ 1- (\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} ) ] = 0
-\]</span></p>
-<p>So we have two kinds of the solution:</p>
-<ul>
-<li>when <span class="math inline">\(y \neq 0\)</span> is for the triangular points (<span class="math inline">\(L_4\)</span> and <span class="math inline">\(L_5\)</span>)</li>
-<li>when <span class="math inline">\(y = 0\)</span> is for the collinear points (<span class="math inline">\(L_1, L_2\)</span>, and <span class="math inline">\(L_3\)</span>)</li>
-</ul>
+\end{equation}\]</span></p>
+<p>So we have two kinds of the solution: &gt; when <span class="math inline">\(y \neq 0\)</span> is for the triangular points (<span class="math inline">\(L_4\)</span> and <span class="math inline">\(L_5\)</span>) &gt; &gt; when <span class="math inline">\(y = 0\)</span> is for the collinear points (<span class="math inline">\(L_1, L_2\)</span>, and <span class="math inline">\(L_3\)</span>)</p>
 <hr>
 <h2 id="triangular-points-when-y-neq-0">Triangular points (when <span class="math inline">\(y \neq 0\)</span> )</h2>
 <p>From Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  y \cdot [ 1- (\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} ) ] = 0 ~~~~(\because y \neq 0 )
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \implies [ 1- (\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} ) ] = 0 
+ \end{equation}
 \]</span></p>
 <p>Equation  is multiplied by <span class="math inline">\((x+\mu_2)\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 (x+\mu_2)- (x+\mu_2)(\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} ) = 0 \\  (x+\mu_2)- (x+\mu_2)\frac{\mu_1}{r_1^{3}} - (x+\mu_2)\frac{\mu_2}{r_2^{3}}  = 0
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From x-direction Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 x -[ (\mu_2+x) \frac{\mu_1}{r_1^{3}} + (x-\mu_1) \frac{\mu_2}{r_2^{3}} ] = 0 \\ (\because \mu_1+\mu_2=1, ~~\mu_1 = 1- \mu_2) \\         x - (\mu_2+x) \frac{\mu_1}{r_1^{3}} - (x-1+\mu_2) \frac{\mu_2}{r_2^{3}}  = 0  \\  x-(\mu_2+x) \frac{\mu_1}{r_1^{3}} - (x+\mu_2) \frac{\mu_2}{r_2^{3}} + \frac{\mu_2}{r_2^{3}} = 0 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>By subtracting Equation  from Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \mu_2- \frac{\mu_2}{r_2^{3}} = 0 \\ \implies r_2 = 1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Equation  is multiplied by <span class="math inline">\((x-\mu_1)\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  (x-\mu_1)- (x-\mu_1)(\frac{\mu_1}{r_1^{3}} + \frac{\mu_2}{r_2^{3}} ) = 0 \\          (x-\mu_1)- (x-\mu_1)\frac{\mu_1}{r_1^{3}} - (x-\mu_1)\frac{\mu_2}{r_2^{3}}  = 0
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From x-direction Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 x -[ (\mu_2+x) \frac{\mu_1}{r_1^{3}} + (x-\mu_1) \frac{\mu_2}{r_2^{3}} ] = 0 \\ (\because \mu_2 = 1- \mu_1) \\         x - (1- \mu_1+x) \frac{\mu_1}{r_1^{3}} - (x- \mu_1) \frac{ \mu_2}{r_2^{3}}  = 0  \\         x-(x-\mu_1) \frac{\mu_1}{r_1^{3}}-\frac{\mu_1}{r_1^{3}} - (x-\mu_1) \frac{\mu_2}{r_2^{3}} = 0
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>By subtracting Equation  from Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  -\mu_1+ \frac{\mu_1}{r_1^{3}} = 0 \\ \implies r_1 = 1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>So <span class="math inline">\(r_1=r_2 = 1\)</span>, it is the distance between the two masses. Then, let's find the coordinate of <span class="math inline">\(L_4\)</span> and <span class="math inline">\(L_5\)</span></p>
 <p>From Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  r_1^2 = (\mu_2+x)^2 + y^2 = 1 \\        \mu_2^2 + 2\mu_2 x + x^2 +y^2 = 1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_2^2 = (x-\mu_1)^2 + y^2 = 1 \\        x^2 - 2x\mu_1 + \mu_1^2 +y^2 = 1 \\        (\because \mu_1 = 1- \mu_2) \\       x^2 - 2x(1-\mu_2) + (1-\mu_2)^2 +y^2 = 1 \\        x^2 -2x + 2\mu_2x +1 - 2\mu_2 + \mu_2^2 + y^2 = 1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>By subtracting Equation  from Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 1-2\mu_2-2x =0 \\ \implies 2(\mu_2+x) = 1 \\ \implies x=\frac{1}{2}-\mu_2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting <span class="math inline">\(x = \frac{1}{2}-\mu_2\)</span> into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 (\mu_2+x)^2 + y^2 = 1 \\ \implies [\mu_2+ (\frac{1}{2}-\mu_2) ]^2+y^2 = 1 \\ \implies y^2 = 1- \frac{1}{4} = \frac{3}{4} \\ \implies y = \frac{\pm \sqrt{3}}{2} 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Finally, we got the position of <span class="math inline">\(L_4\)</span> and <span class="math inline">\(L_5\)</span></p>
 <blockquote>
 <p><span class="math inline">\(L_4\)</span> Leading point: <span class="math inline">\(x=\frac{1}{2}-\mu_2\)</span>, <span class="math inline">\(y=\frac{+\sqrt{3}}{2}\)</span><br>
@@ -319,108 +330,108 @@ r_2^2 = (x-\mu_1)^2 + y^2 = 1 \\        x^2 - 2x\mu_1 + \mu_1^2 +y^2 = 1 \\
 </figure>
 <p>Location of Lagrangian point <span class="math inline">\(L_1\)</span>, <span class="math inline">\(L_2\)</span>, and <span class="math inline">\(L_3\)</span></p>
 <p>For the convenience of later calculation, we rewrite <span class="math inline">\(V(r)\)</span>, <span class="math inline">\(\frac{\partial V}{\partial x}\)</span>, and <span class="math inline">\(\frac{\partial V}{\partial y}\)</span> as following: From Equation  and Equation ,</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  r_1^2 = (\mu_2+x)^2 + y^2 + z^2
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
  r_2^2 =(x-\mu_1)^2 + y^2 + z^2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Equation  is multiplied by <span class="math inline">\(\mu_1\)</span>, and <span class="math inline">\(z=0\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \mu_1r_1^2 = \mu_1(\mu_2+x)^2 + \mu_1y^2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Equation  is multiplied by <span class="math inline">\(\mu_2\)</span>, and <span class="math inline">\(z=0\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \mu_2r_2^2 = \mu_2(x-\mu_1)^2 + \mu_2y^2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>By adding Equation  to Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \mu_1r_1^2 + \mu_2r_2^2 = y^2(\mu_1+\mu_2) + \mu_1(x^2 +2\mu_2x + \mu_2^2) + \mu_2(x^2 -2\mu_1x + \mu_1^2) \\        ~~~~~(\because \mu_1 + \mu_2 = 1) \\        = x^2 + y^2 + \mu_1^2\mu_2 + \mu_1\mu_2^2 \\        = x^2 + y^2 + \mu_1\mu_2(\mu_1+\mu_2) \\ \implies \mu_1r_1^2 + \mu_2r_2^2 = x^2 + y^2 + \mu_1\mu_2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Based on Equation , Equation  becomes</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
        V(r) = \frac{1}{2}(x^2+y^2) + \frac{\mu_1}{r_1}+\frac{\mu_2}{r_2} \\            = \frac{1}{2}(\mu_1r_1^2 + \mu_2r_2^2 - \mu_1\mu_2) + \frac{\mu_1}{r_1}+\frac{\mu_2}{r_2} \\            = \frac{-1}{2}\mu_1\mu_2 +\mu_1\frac{r_1^2}{2}+\mu_2\frac{r_2^2}{2} + \frac{\mu_1}{r_1}+\frac{\mu_2}{r_2} \\            = \mu_1(\frac{1}{r_1}+\frac{r_1^2}{2}) + \mu_2(\frac{1}{r_2}+\frac{r_2^2}{2})-\frac{1}{2}\mu_1\mu_2 \\ \implies  V(r) = \mu_1(\frac{1}{r_1}+\frac{r_1^2}{2}) + \mu_2(\frac{1}{r_2}+\frac{r_2^2}{2})-\frac{1}{2}\mu_1\mu_2
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>According to Equation , <span class="math inline">\(\frac{\partial V}{\partial x}\)</span> is rewritten as</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\partial V}{\partial x} = \frac{\partial V}{\partial r_1}\frac{\partial r_1}{\partial x} + \frac{\partial V}{\partial r_2}\frac{\partial r_2}{\partial x} = 0 \\        = \mu_1 \cdot (\frac{-1}{r_1^2}+r_1) \cdot[\frac{1}{2}((x+\mu_2)^2+y^2)^{1/2} \cdot 2(x+\mu_2)] \\ ~~~~ +\mu_2 \cdot (\frac{-1}{r_2^2}+r_2) \cdot [\frac{1}{2}((x-\mu_1)^2+y^2)^{1/2} \cdot 2(x-\mu_1)] \\        = \mu_1\cdot (\frac{-1}{r_1^2}+r_1) \frac{(x+\mu_2)}{r_1} +\mu_2 \cdot(\frac{-1}{r_2^2}+r_2) \frac{(x-\mu_1)}{r_2} \\ \implies \frac{\partial V}{\partial x} = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{(x+\mu_2)}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{(x-\mu_1)}{r_2}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Also, <span class="math inline">\(\frac{\partial V}{\partial y}\)</span> is rewritten as</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\partial V}{\partial y} = \frac{\partial V}{\partial r_1}\frac{\partial r_1}{\partial y} + \frac{\partial V}{\partial r_2}\frac{\partial r_2}{\partial y} = 0 \\        = \mu_1\cdot (\frac{-1}{r_1^2}+r_1) \cdot[\frac{1}{2}((x+\mu_2)^2+y^2)^{1/2} \cdot 2y] \\         ~~~~  +\mu_2 \cdot (\frac{-1}{r_2^2}+r_2) \cdot [\frac{1}{2}((x-\mu_1)^2+y^2)^{1/2} \cdot 2y] \\        = \mu_1 \cdot (\frac{-1}{r_1^2}+r_1) \frac{y}{r_1} +\mu_2 \cdot (\frac{-1}{r_2^2}+r_2) \frac{y}{r_2} \\ \implies \frac{\partial V}{\partial y} = \mu_1(\frac{-1}{r_1^2}+r_1) \frac{y}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \frac{y}{r_2} 
-\]</span></p>
+ \end{equation}\]</span></p>
 <figure>
 <img src="/2022/largrange-points/FIG3.0_L1.png" alt="Location of Lagrangian point L_1"><figcaption aria-hidden="true">Location of Lagrangian point <span class="math inline">\(L_1\)</span></figcaption>
 </figure>
 <p>Location of Lagrangian point <span class="math inline">\(L_1\)</span></p>
 <p>For the <span class="math inline">\(L_1\)</span> point, which is between the mass <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span>.</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_1 + r_2 = 1, r_1 = x+\mu_2, r_2=-x+\mu_1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the above condition into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\partial V}{\partial x} = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{(x+\mu_2)}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{(x-\mu_1)}{r_2} = 0 \\    = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{r_1}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{(-r_2)}{r_2} = 0 \\     ~~~~(\because r_1 = 1-r_2) \\    = \mu_1[\frac{-1}{(1-r_2)^2} + (1-r_2)] - \mu_2(\frac{-1}{r_2^2}+r_2) = 0 \\ \implies   \mu_1[\frac{-1}{(1-r_2)^2} + (1-r_2)] = \mu_2(\frac{-1}{r_2^2}+r_2) 
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \frac{\mu_2}{\mu_1} = \frac{\frac{-1}{(1-r_2)^2} + (1-r_2)}{\frac{-1}{r_2^2}+r_2} ~~~~(\because \times  (1-r_1)^2 \cdot r_1^2) \\     =  \frac{ -r_2^2 + (1-r_2)^3 r_2^2 }{-(1-r_2)^2 + (1-r_2)^2r_2^3 } \\    =  \frac{  r_2^2 [(1-r_2)^3-1]}{ (1-r_2)^2(r_2^3 -1)} \\    =  \frac{  r_2^2 (1-3r_2+3r_2^2-r_2^3-1)}{ (1-2r_2+r_2^2)(r_2^3 -1)} \\    =  \frac{ 3r_2^3 (1-r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2)(1-r_2^3)} \\
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Let <span class="math inline">\(\alpha = (\frac{\mu_2}{3\mu_1})^{1/3}\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha = (\frac{\mu_2}{3\mu_1})^{1/3} \\    = r_2 [\frac{(1-r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2)(1-r_2^3)} ]^{1/3} \\    = r_2 [\frac{(1-r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2-r_2^3+2r_2^4-r_2^5) } ]^{1/3}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using Talyer's expression <span class="math inline">\(\frac{1}{1-x} = (1-x)^{-1} = 1+x+x^2+\mathcal{O}(x^3)...\)</span> (if<span class="math inline">\(~ x \ll 1\)</span>)</p>
 <p>The denominator of Equation  becomes</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{1}{1-x} = (1-x)^{-1} = 1+x+x^2+\mathcal{O}(x^3)\\    \implies  \frac{1}{ (1-2r_2+r_2^2-r_2^3+2r_2^4-r_2^5) } \\     \approx  1+x+x^2 \\         ( \because x = 2r_2-r_2^2+r_2^3 , \\ ~~~~ x^2 = (2r_2-r_2^2+r_2^3)^2 \\   = 4r_2^2-2r_2^3-2r_2^4-2r_2^3+r_2^4-r_2+2r_2^3-r_2^5+r_2^6 \\ = 4r_2^2-2r_2^3-r_2^4-r_2^5+r_2^6 ~~~)\\     \approx  1+2r_2-r_2^2+r_2^3+ 4r_2^2-2r_2^3-r_2^4-r_2^5+r_2^6 + \mathcal{O}(r_2^7) \\    \approx 1 + 2r_2 + 3r_2^2 +  \mathcal{O}(r_2^3) 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p><span class="math inline">\(\mathcal{O}(r_2^3)\)</span> is the omitted terms because the value is small to neglect.</p>
 <p>Substituting the result of Equation  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha = (\frac{\mu_2}{3\mu_1})^{1/3} \\    = r_2 [\frac{(1-r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2-r_2^3+2r_2^4-r_2^5) } ]^{1/3} \\    = r_2 [ (1-r_2+\frac{1}{3}r_2^2)(1 + 2r_2 + 3r_2^2 + \mathcal{O}(r_2^3)) ]^{1/3} \\    = r_2 [ 1+2r_2+3r_2^2 -r_2+2r_2^2- 3r_2^3 + \frac{1}{3}r_2^2 + \frac{2}{3}r_2^3 + r_2^4]^{1/3} \\    = r_2 [ 1+ r_2 + \frac{4}{3}r_2^2 - \frac{7}{3}r_2^3 + r_2^4 ]^{1/3} \\    = r_2 [ 1+ r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3} \\
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using binomial series <span class="math inline">\((1+x)^n = 1+nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \mathcal{O}(x^4)\)</span></p>
 <p>The part of Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 (1+x)^n = 1+nx + \frac{n(n-1)}{2!}x^2 + \mathcal{O}(x^3)  \\ \implies    = [1+ r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3} \\     \approx 1+nx + \frac{n(n-1)}{2!}x^2  \\             ( \because n= \frac{1}{3} ,~~x = r_2 + \frac{4}{3}r_2^2 ,~~x^2 = (r_2 + \frac{4}{3}r_2^2)^2 ~~~)\\     = 1+ \frac{1}{3}( r_2 + \frac{4}{3}r_2^2) + \frac{1}{2}(\frac{1}{3})(\frac{1}{3}-1)(r_2^2+\frac{8}{3}r_2^3+\frac{16}{9}r_2^4) \\    = 1+ \frac{1}{3}r_2 + \frac{4}{9}r_2^2 + \frac{-1}{9}(r_2^2+\frac{8}{3}r_2^3+\frac{16}{9}r_2^4) \\    = 1+ \frac{1}{3}r_2 + \frac{1}{3}r_2^2 -  \frac{8}{27}r_2^3 - \frac{16}{81}r_2^4 \\    = 1+ \frac{1}{3}r_2 + \frac{1}{3}r_2^2 + \mathcal{O}(r_2^3) 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Therefore, Substituting the result of Equation  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
     \alpha  = (\frac{\mu_2}{3\mu_1})^{1/3} \\    = r_2 [ 1+ r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3} \\    = r_2 [ 1+ \frac{1}{3}r_2 + \frac{1}{3}r_2^2 + \mathcal{O}(r_2^3)] \\    = r_2 +\frac{1}{3} r_2^2 + \frac{1}{3}r_2^3 + \mathcal{O}(r_2^4) \\
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Here, using <strong>Lagrangian's inversion method</strong> to invert the series expansions in Equation .</p>
 <p>A variable <span class="math inline">\(z\)</span> can be expressed as a function of a</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 x = z + e \cdot \phi[x] ~~~~ (e&lt;1)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Then <span class="math inline">\(x\)</span> can also be expressed as a function of z using the relationship</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 x = z + \sum_{j=1}^{+\infty} \frac{e^j}{j!} \frac{d^{j-1}}{dz^{j-1}}[\phi{(z)}]^j
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Compared with Equation  and Equation , we can write</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_2 = \alpha - \frac{1}{3}[r_2^2+r_2^3 +\mathcal{O}(r_2^4) ] \\        = \alpha + (\frac{-1}{3})\phi(r_2) ~~~~(\because e=\frac{-1}{3})
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \implies \phi(r_2) = r_2^2 +r_2^3 + \mathcal{O}(r_2^4)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>and hence</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \phi(\alpha) = \alpha^2 + \alpha^3 
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 [\phi(\alpha)]^2 = \alpha^4 + 2\alpha^5 + \alpha^6
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \frac{d}{d\alpha}[\phi(\alpha)]^2  = 4\alpha^3 + 10\alpha^4 + \mathcal{O}(\alpha^5) 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>substituting the result of Equation , , and  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  r_2 = \alpha +  \sum_{j=1}^{+\infty} \frac{(\frac{-1}{3})^j}{j!} \frac{d^{j-1}}{dz^{j-1}}[\phi{z}]^j \\   = \alpha + \frac{\frac{-1}{3}}{1!}\phi(\alpha) + \frac{1}{2}(\frac{1}{9})\frac{d}{d\alpha}[\phi(\alpha)]^2 + ...\\   = \alpha + \frac{1}{3}(\alpha^2+\alpha^3) + \frac{1}{18}(4\alpha^3 + 10\alpha^4 +  \mathcal{O}(\alpha^5) ) \\   = \alpha - \frac{1}{3}\alpha^2 - \frac{1}{9}\alpha^3 + \frac{5}{9}\alpha^4 + \mathcal{O}(\alpha^5) \\ \implies r_2 \approx \alpha(1-\frac{1}{3}\alpha-\frac{1}{9}\alpha^2 + \frac{5}{9}\alpha^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From previous condition,</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  r_2 = -x + \mu_1 \\ \implies     x = \mu_1 - r_2 \\    = \mu_1 - \alpha - \frac{1}{3}\alpha^2 - \frac{1}{9}\alpha^3 + \frac{5}{9}\alpha^4 + \mathcal{O}(\alpha^5) \\    = \mu_1 -  (\frac{\mu_2}{3\mu_1})^{1/3} - \frac{1}{3} (\frac{\mu_2}{3\mu_1})^{2/3} - \frac{1}{9} (\frac{\mu_2}{3\mu_1})^{3/3} + \frac{5}{9} (\frac{\mu_2}{3\mu_1})^{4/3} + \mathcal{O}( (\frac{\mu_2}{3\mu_1})^{5/3}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>This is location of <span class="math inline">\(L_1\)</span> point on <span class="math inline">\(x\)</span>-axis.</p>
 <hr>
 <figure>
@@ -428,125 +439,124 @@ r_2 = \alpha - \frac{1}{3}[r_2^2+r_2^3 +\mathcal{O}(r_2^4) ] \\        = \alpha 
 </figure>
 <p>Location of Lagrangian point <span class="math inline">\(L_2\)</span></p>
 <p>For the <span class="math inline">\(L_2\)</span> point, which is outside the mass <span class="math inline">\(\mu_2\)</span>.</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_1 - r_2 = 1, r_1 = x+\mu_2, r_2=x-\mu_1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the above condition into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\partial V}{\partial x} = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{(x+\mu_2)}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{(x-\mu_1)}{r_2} = 0 \\    = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{r_1}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{r_2}{r_2} = 0 \\     ~~~~(\because r_1 = r_2+1 ) \\    = \mu_1[\frac{-1}{(r_2+1)^2} + (r_2+1)] + \mu_2(\frac{-1}{r_2^2}+r_2) = 0 \\     \implies   \mu_1[\frac{-1}{(r_2+1)^2} + (r_2+1)] = \mu_2(\frac{1}{r_2^2}-r_2)
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \implies  \frac{\mu_2}{\mu_1} = \frac{\frac{-1}{(r_2+1)^2} + (r_2+1)}{\frac{1}{r_2^2}-r_2} ~~~~(\because \times  (1+r_2)^2 \cdot r_2^2) \\     =  \frac{ -r_2^2 + (r_2+1)^3 r_2^2 }{(r_2+1)^2 - (r_2+1)^2r_2^3 } \\    =  \frac{  r_2^2 [(r_2+1)^3-1]}{ (r_2+1)^2(1-r_2^3 )} \\    =  \frac{  r_2^2 (1+3r_2+3r_2^2+r_2^3-1)}{ (1-2r_2+r_2^2)(1-r_2^3)} \\    =  \frac{ 3r_2^3 (1+r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2)(1-r_2^3)} \\    = \frac{ 3r_2^3 (1+r_2+\frac{1}{3}r_2^2)}{ (1+2r_2 +r_2^2 -r_2^3 -2r_2^4 -r_2^5) }
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Let <span class="math inline">\(\alpha = (\frac{\mu_2}{3\mu_1})^{1/3}\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha = (\frac{\mu_2}{3\mu_1})^{1/3} \\     =  r_2 [ \frac{(1+r_2+\frac{1}{3}r_2^2)}{ (1-2r_2+r_2^2)(1-r_2^3)} ]^{1/3} \\     = r_2 [\frac{(1+r_2+\frac{1}{3}r_2^2)}{ (1+2r_2 +r_2^2 -r_2^3 -2r_2^4 -r_2^5)} ]^{1/3}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using Talyer's expression <span class="math inline">\(\frac{1}{1-x} = (1-x)^{-1} = 1+x+x^2+\mathcal{O}(x^3).\)</span>.. (if <span class="math inline">\(x \ll 1\)</span>)</p>
 <p>The denominator of Equation  becomes</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
     \frac{1}{1-x} = (1-x)^{-1} = 1+x+x^2+\mathcal{O}(x^3)\\    \implies  \frac{1}{(1+2r_2 +r_2^2 -r_2^3 -2r_2^4 -r_2^5) } \\     \approx  1+x+x^2 \\         ( \because x = -2r_2-r_2^2 , \\ ~~~~ x^2 = (-2r_2-r_2^2)^2 = 4r_2^2+42r_2^3+r_2^4 ~~) \\    = 1 + 2r_2-r_2^2 +  4r_2^2+42r_2^3+r_2^4  + \mathcal{O}(r_2^7) \\    = 1 - 2r_2 + 3r_2^2 + \mathcal{O}(r_2^3) \\
-\]</span></p>
+ \end{equation}\]</span></p>
 <p><span class="math inline">\(\mathcal{O}(r_2^3)\)</span> is the omitted terms because the value is small to neglect.</p>
 <p>Substituting the result of Equation  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha = (\frac{\mu_2}{3\mu_1})^{1/3} \\    = r_2 [\frac{(1+r_2+\frac{1}{3}r_2^2)}{ (1 - 2r_2 + 3r_2^2 ) } ]^{1/3} \\    = r_2 [ (1-r_2+\frac{1}{3}r_2^2)(1 + 2r_2 + 3r_2^2 + \mathcal{O}(r_2^3)) ]^{1/3} \\    = r_2 [ 1- 2r_2+ 3r_2^2 + r_2+ 2r_2^2+ 3r_2^3 + \frac{1}{3}r_2^2 - \frac{2}{3}r_2^3 + r_2^4]^{1/3} \\    = r_2 [ 1- r_2 + \frac{4}{3}r_2^2 + \frac{7}{3}r_2^3 + r_2^4 ]^{1/3} \\    = r_2 [ 1- r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using binomial series <span class="math inline">\((1+x)^n = 1+nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \mathcal{O}(x^4)\)</span></p>
-<p>The part of Equation </p>
-<p><span class="math display">\[
+<p>The part of Equation  <span class="math display">\[\begin{equation}
  (1+x)^n = 1+nx + \frac{n(n-1)}{2!}x^2 + \mathcal{O}(x^3)  \\ \implies    = [1- r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3} \\     \approx 1+nx + \frac{n(n-1)}{2!}x^2  \\             ( \because n= \frac{1}{3} ,~~x = -r_2 + \frac{4}{3}r_2^2 ,~~ \\  x^2 = (-r_2 + \frac{4}{3}r_2^2)^2 = r_2^2 - \frac{8}{3}r_2^3+\frac{16}{9}r_2^4 ~~~)\\     = 1+ \frac{1}{3}(- r_2 + \frac{4}{3}r_2^2) + \frac{1}{2}(\frac{1}{3})(\frac{1}{3}-1)(r_2^2 -\frac{8}{3}r_2^3+\frac{16}{9}r_2^4) \\    = 1- \frac{1}{3}r_2 + \frac{4}{9}r_2^2 + \frac{-1}{9}(r_2^2- \frac{8}{3}r_2^3+\frac{16}{9}r_2^4) \\    = 1- \frac{1}{3}r_2 + \frac{1}{3}r_2^2 + \frac{8}{27}r_2^3 -\frac{16}{81}r_2^4 \\    = 1- \frac{1}{3}r_2 + \frac{1}{3}r_2^2 + \mathcal{O}(r_2^3) 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Therefore, Substituting the result of Equation  on Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha  = (\frac{\mu_2}{3\mu_1})^{1/3} \\    = r_2 [ 1- r_2 + \frac{4}{3}r_2^2 + \mathcal{O}(r_2^3)]^{1/3} \\    = r_2 [1- \frac{1}{3}r_2 + \frac{1}{3}r_2^2 + \mathcal{O}(r_2^3)] \\    = r_2 - \frac{1}{3} r_2^2 + \frac{1}{3}r_2^3 + \mathcal{O}(r_2^4) \\
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Here, using Lagrangian's inversion method as same as <span class="math inline">\(L_1\)</span> to invert the series expansions in Equation .</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_2 = \alpha + \frac{1}{3}[r_2^2-r_2^3 +\mathcal{O}(r_2^4) ] \\        = \alpha + (\frac{1}{3})\phi(r_2)  ~~~~(\because e= \frac{1}{3})
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \implies \phi(r_2) = r_2^2 - r_2^3 + \mathcal{O}(r_2^4)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>And hence</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \phi(\alpha) = \alpha^2 - \alpha^3 
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 [\phi(\alpha)]^2 = \alpha^4 - 2\alpha^5 + \alpha^6 
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \frac{d}{d\alpha}[\phi(\alpha)]^2  = 4\alpha^3 - 10\alpha^4 + \mathcal{O}(\alpha^5)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the result of Equation , , and  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_2 = \alpha +  \sum_{j=1}^{+\infty} \frac{(\frac{1}{3})^j}{j!} \frac{d^{j-1}}{dz^{j-1}}[\phi{z}]^j \\   = \alpha + \frac{\frac{1}{3}}{1!}\phi(\alpha) + \frac{1}{2}(\frac{1}{9})\frac{d}{d\alpha}[\phi(\alpha)]^2 + ...\\   = \alpha + \frac{1}{3}(\alpha^2-\alpha^3) + \frac{1}{18}(4\alpha^3 - 10\alpha^4 +  \mathcal{O}(\alpha^5) ) \\   = \alpha + \frac{1}{3}\alpha^2 -\frac{1}{3}\alpha^3 +\frac{2}{9}\alpha^3 - \frac{5}{9}\alpha^4 + \mathcal{O}(\alpha^5) \\   = \alpha + \frac{1}{3}\alpha^2 -\frac{1}{9}\alpha^3 - \frac{5}{9}\alpha^4 + \mathcal{O}(\alpha^5) \\ \implies r_2 \approx \alpha(1+\frac{1}{3}\alpha-\frac{1}{9}\alpha^2 -\frac{5}{9}\alpha^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From previous condition,</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  r_2 = x - \mu_1 \\ \implies     x = \mu_1 + r_2 \\    = \mu_1 + \alpha + \frac{1}{3}\alpha^2 - \frac{1}{9}\alpha^3 - \frac{5}{9}\alpha^4 + \mathcal{O}(\alpha^5) \\    = \mu_1 + (\frac{\mu_2}{3\mu_1})^{1/3} + \frac{1}{3} (\frac{\mu_2}{3\mu_1})^{2/3} - \frac{1}{9} (\frac{\mu_2}{3\mu_1})^{3/3} - \frac{5}{9} (\frac{\mu_2}{3\mu_1})^{4/3} + \mathcal{O}( (\frac{\mu_2}{3\mu_1})^{5/3}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>This is location of <span class="math inline">\(L_2\)</span> point on x-axis.</p>
 <figure>
 <img src="/2022/largrange-points/FIG3.0_L3.png" alt="Location of Lagrangian point L_3"><figcaption aria-hidden="true">Location of Lagrangian point <span class="math inline">\(L_3\)</span></figcaption>
 </figure>
 <p>Location of Lagrangian point <span class="math inline">\(L_3\)</span></p>
 <p>For the <span class="math inline">\(L_3\)</span> point, which is outside the mass <span class="math inline">\(\mu_1\)</span> on the negative x-axis.</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_2 - r_1 = 1, r_1 = -x-\mu_2, r_2=-x+\mu_1
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the above condition into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\partial V}{\partial x} = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{(x+\mu_2)}{r_1} +\mu_2(\frac{-1}{r_2^2}+r_2) \cdot \frac{(x-\mu_1)}{r_2} = 0 \\    = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot \frac{(-r_1)}{r_1} +\mu_2(\frac{1}{r_2^2}+r_2) \cdot \frac{r_2}{r_2} = 0 ~~~~~(\because r_2 = 1+ r_1) \\    = \mu_1(\frac{-1}{r_1^2}+r_1) \cdot (-1) +\mu_2[\frac{1}{(1+ r_1)^2}+(1+ r_1)] = 0 \\ \implies     \mu_1(\frac{-1}{r_1^2}+r_1) = \mu_2[\frac{1}{(1+ r_1)^2}+(1+ r_1)] 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Here, let <span class="math inline">\(r_1 = 1+ \beta\)</span>, <span class="math inline">\(r_2 = 1+r_1 = 2+\beta\)</span></p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \mu_1(\frac{-1}{r_1^2}+r_1) = \mu_2[\frac{1}{(1+ r_1)^2}+(1+ r_1)] \\ \implies     \mu_1(\frac{-1}{(1+\beta)^2}+ (1+\beta)) = \mu_2[\frac{1}{(1+ (1+\beta))^2}+(1+ (1+\beta))] \\ \implies  \frac{\mu_2}{\mu_1} = [\frac{-1}{(1+\beta)^2}+ (1+\beta)] \cdot [\frac{1}{(2+\beta)^2}+(2+\beta))]^{-1}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using binomial series, calculate the part of Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{1}{(1+\beta)^2} = (1+\beta)^{-2} \\    = (1+x)^n \\    =  1+nx + \frac{n(n-1)}{2!}x^2 + \mathcal{O}(x^3) \\    ~~~(\because n=-2, ~ x=\beta) \\    = 1 - 2\beta + \frac{(-2)(-3)}{2}\beta^2 \\    = 1 - 2\beta + 3\beta^3
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using binomial series, calculate the part of Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{1}{(2+\beta)^2} = \frac{1}{(4+4\beta+4\beta^2)} \\                    = \frac{1}{4(1+\beta+\frac{1}{4}\beta^2)} \\                    = \frac{1}{4}( 1+nx + \frac{n(n-1)}{2!}x^2) \\                    (\because n=-1~, ~ x=\beta+ \frac{1}{4}\beta^2, \\  x^2 =(\beta+ \frac{1}{4}\beta^2)^2 = \beta^2 + \frac{1}{2}\beta^3 +\frac{1}{16}\beta^4 ~~) \\                    = \frac{1}{4} (1-\beta-\frac{1}{4}\beta^2 + \beta^2 +\frac{1}{2}\beta^3 + \frac{1}{16}\beta^4 ) \\                    = \frac{1}{4} - \frac{1}{4}\beta + \frac{3}{16}\beta^2 +\frac{1}{8}\beta^3 +\frac{1}{64}\beta^4 \\                    = \frac{1}{4} - \frac{1}{4}\beta + \frac{3}{16}\beta^2 + \mathcal{O}(\beta^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the result of Equation  and  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\mu_2}{\mu_1} = [\frac{-1}{(1+\beta)^2}+ (1+\beta)] \cdot [\frac{1}{(2+\beta)^2}+(2+\beta))]^{-1} \\    = ( -1+ 2\beta - 3\beta^3 +1+ \beta) \cdot (\frac{1}{4} - \frac{1}{4}\beta + \frac{3}{16}\beta^2 -2-\beta)^{-1} \\    = (3\beta -3\beta^2)(\frac{-7}{4}-\frac{5}{4}\beta+\frac{3}{16}\beta^2 )^{-1}
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>The part of Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  (\frac{-7}{4}-\frac{5}{4}\beta+\frac{3}{16}\beta^2 )^{-1}     = \frac{1}{(\frac{-7}{4}-\frac{5}{4}\beta+\frac{3}{16}\beta^2 )} \\    = \frac{1}{\frac{-7}{4}(1+\frac{5}{7}\beta-\frac{3}{28}\beta^2)} \\    = \frac{-4}{7}\frac{1}{(1+\frac{5}{7}\beta-\frac{3}{28}\beta^2)} \\    = \frac{-4}{7}( 1+nx + \frac{n(n-1)}{2!}x^2) \\    (\because n= -1~, ~ x=\frac{5}{7}\beta-\frac{3}{28}\beta^2, \\  ~~~ x^2 =(\frac{5}{7}\beta-\frac{3}{28}\beta^2)^2 = \frac{35}{49}\beta^2 - \frac{30}{196}\beta^3 +\frac{9}{784}\beta^4 ~~) \\    = \frac{-4}{7}[1-\frac{5}{7}\beta+\frac{3}{28}\beta^2 + \frac{1}{2}(-1)(-2)(\frac{35}{49}\beta^2 - \frac{30}{196}\beta^3 +\frac{9}{784}\beta^4) ] \\    = \frac{-4}{7}[1-\frac{5}{7}\beta+\frac{3}{28}\beta^2 + \frac{35}{49}\beta^2 - \frac{30}{196}\beta^3 +\frac{9}{784}\beta^4 ] \\    = \frac{-4}{7}[1-\frac{5}{7}\beta+ \frac{3}{28}\beta^2 + \frac{35}{49}\beta^2 - \frac{30}{196}\beta^3 + \frac{9}{784}\beta^4 ] \\    = \frac{-4}{7}[1-\frac{5}{7}\beta+ \frac{161}{1372}\beta^2 - \frac{30}{196}\beta^3 + \mathcal{O}(\beta^5)  ]
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Substituting the result of Equation  into Equation </p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \frac{\mu_2}{\mu_1} = (3\beta -3\beta^2)(\frac{-7}{4}-\frac{5}{4}\beta+\frac{3}{16}\beta^2 )^{-1} \\ = 3(\beta -\beta^2) \cdot \frac{-4}{7}[1-\frac{5}{7}\beta+ \frac{161}{1372}\beta^2 - \frac{30}{196}\beta^3 + \mathcal{O}(\beta^5) \\    = \frac{-12}{7}[\beta - \frac{5}{7}\beta^2 + \frac{161}{1372}\beta^3 - \beta + \frac{5}{7}\beta^3- \frac{161}{1372}\beta^4 + \mathcal{O}(\beta^5)] \\    = \frac{-12}{7}[\beta - \frac{12}{7}\beta^2 + \frac{163}{196}\beta^3 -\frac{161}{1372}\beta^4 + \mathcal{O}(\beta^5) ] \\    = \frac{-12}{7}\beta + \frac{144}{49}\beta^2 - \frac{1956}{1372}\beta^3 + \frac{1932}{9604}\beta^4 + \mathcal{O}(\beta^5) \\ \implies  \frac{\mu_2}{\mu_1} =\frac{-12}{7}\beta + \frac{144}{49}\beta^2-\frac{1956}{1372}\beta^3 + \frac{1932}{9604}\beta^4 + \mathcal{O}(\beta^5) 
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Let <span class="math inline">\(\alpha = \frac{\mu_2}{\mu_1}\)</span>, and <span class="math inline">\(k= \frac{12}{7}\beta\)</span> , the higher terms of Equation  is neglected, because the value id small.</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \alpha = \frac{\mu_2}{\mu_1} =\frac{-12}{7}\beta + \frac{144}{49}\beta^2 -\frac{1956}{1372}\beta^3 + \frac{1932}{9604}\beta^4 + \mathcal{O}(\beta^5) \\    = \frac{-12}{7}\beta + \frac{144}{49}\beta^2 +\mathcal{O}(\beta^3)  \\    = -k + k^2 +\mathcal{O}(k^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>Using Lagrangian’s inversion method to invert the series expansions in Equation</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
  k  = -\alpha + k^2 +\mathcal{O}(k^3) \\        = -\alpha + (1)\cdot \phi(k)  ~~~~(\because e = 1 )
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \implies \phi(k) = k^2 + \mathcal{O}(k^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>And hence</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 \implies \phi(\alpha) = \alpha^2 + \mathcal{O}(\alpha^3)
-\]</span></p>
-<p><span class="math display">\[
+ \end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
 \frac{12}{7}\beta = k = -\alpha + \alpha^2 +  \mathcal{O}(\alpha^3) \\ \implies \beta = \frac{-7}{12}\alpha + \frac{7}{12}\alpha^2 + \mathcal{O}(\alpha^3)  \\ = \frac{-7}{12} (\frac{\mu_2}{\mu_1}) + \frac{7}{12}((\frac{\mu_2}{\mu_1})^2) + \mathcal{O}((\frac{\mu_2}{\mu_1})^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>From previous condition,</p>
-<p><span class="math display">\[
+<p><span class="math display">\[\begin{equation}
 r_1 = 1 + \beta \\    = x + \mu_2 \\ \implies x = -r_1 - \mu_2 \\ = -(1+\beta) - \mu_2 \\ = -1 +(\frac{-7}{12}\alpha + \frac{7}{12}\alpha^2) + \mathcal{O}(\alpha^3) - \mu_2 \\ = -1 - \mu_2 + \frac{-7}{12} (\frac{\mu_2}{\mu_1}) - \frac{7}{12}((\frac{\mu_2}{\mu_1})^2) + \mathcal{O}((\frac{\mu_2}{\mu_1})^3)
-\]</span></p>
+ \end{equation}\]</span></p>
 <p>This is location of <span class="math inline">\(L_3\)</span> point on the negative <span class="math inline">\(x\)</span>-axis.</p>
-<h2 id="references">References</h2>
+<h1 id="references">References</h1>
 <ol type="1">
 <li><a href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
 <li><a href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
@@ -559,5 +569,94 @@ r_1 = 1 + \beta \\    = x + \mu_2 \\ \implies x = -r_1 - \mu_2 \\ = -(1+\beta) -
       <tags>
         <tag>Asteroids, dynamical calculation</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>The Restricted Three-Body Problem Part 2</title>
+    <url>/2021/Tisserand%20Relation%20T_J/</url>
+    <content><![CDATA[<h1 id="tisserand-relation">Tisserand Relation</h1>
+<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
+<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
+<p><span class="math display">\[\begin{equation} \label{eq34}
+\begin{split}
+     C_J &amp;= 2V - v^2 \\
+         &amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\
+\end{split}
+\end{equation}\]</span></p>
+<p>For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[\begin{equation} \label{eq28.1}
+    GM_\odot = \mu_1 = \mu 
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq28.1}
+    r_1 = r
+\end{equation}\]</span></p>
+<p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
+<p><span class="math display">\[\begin{equation} \label{eq28.2}
+    \frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
+<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
+<p><span class="math display">\[\begin{equation} \label{eq27}
+\begin{split}
+     E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a} 
+\end{split}
+\end{equation}\]</span></p>
+<p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
+<p><span class="math display">\[\begin{equation} \label{eq28}
+\begin{split}
+     v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a})
+\end{split}
+\end{equation}\]</span> <span class="math display">\[\begin{equation} \label{eq30}
+    \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
+\end{equation}\]</span></p>
+<p>FoFor the angular momentum of the orbit <span class="math display">\[\begin{equation} \label{eq31}
+\begin{split}
+        \vec{h} &amp;= \vec{r} \times \vec{\dot r} \\
+                &amp;= n\sqrt{a(1-e^2)GM} \\
+                &amp;= n\sqrt{a(1-e^2)\mu} \\
+                &amp;= constant 
+\end{split}
+\end{equation}\]</span></p>
+<p>For the orbital energy, <span class="math display">\[\begin{equation} \label{eq32}
+\begin{split}
+        E &amp;=  \vec h \cdot \vec n \\
+        &amp;= h \cdot n \cos{i} \\
+        &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
+\end{split}
+\end{equation}\]</span></p>
+<p>the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by <span class="math display">\[\begin{equation} \label{eq33}
+        2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i} 
+\end{equation}\]</span></p>
+<p>So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes <span class="math display">\[\begin{equation} \label{eq34}
+\begin{split}
+     C_J &amp;= 2V - v^2 \\
+         &amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\
+        &amp; ~~~~ (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\
+        &amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\ 
+        &amp;= \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\
+        &amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\
+        &amp;= \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} \\
+        &amp; ~~~~ (\because n= 1) \\
+        &amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}
+\end{split}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} \label{eq35}
+        C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant 
+\end{equation}\]</span></p>
+<p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
+<p><span class="math display">\[\begin{equation} \label{eq36}
+         T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant 
+\end{equation}\]</span></p>
+<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by <span class="math display">\[\begin{equation} \label{eq37}
+         T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;}    
+\end{equation}\]</span></p>
+<p>By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li><a href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
+<li><a href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
+<li><a href="https://core.ac.uk/download/pdf/157747722.pdf">The circular restricted three-body problem. Carlo Nipoti, Dipartimento di Fisica e Astronomia, Universit`a di Bologna</a></li>
+<li><a href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec18.pdf">Lecture L18 - Exploring the Neighborhood: the Restricted Three-Body Problem</a></li>
+<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem/">The restricted three-body problem (1): Equation of motion, The Jacobi Integral, and The Tisserand Relation</a></li>
+<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem2/">The restricted three-body problem (2): Lagrangian points and the stability analysis</a></li>
+</ol>
+]]></content>
   </entry>
 </search>
