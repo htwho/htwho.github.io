@@ -1,169 +1,216 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Install the Linux system on Windows</title>
-    <url>/2021/LinuxonWin/</url>
-    <content><![CDATA[<h1 id="中文版">中文版</h1>
-<h2 id="step-1-啟用windows-linux-system">Step 1 啟用Windows Linux System</h2>
-<p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"></p>
-<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
-<h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
-<p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
-<p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
-<p>安裝成功後，就可以在 Windows 選單找到 Ubuntu App</p>
-<p><img src="/2021/LinuxonWin/Untitled%203.png" alt="Untitled" style="zoom:50%;"></p>
-<ul>
-<li><p><strong>啟動Ubuntu後卻發現出現錯誤訊息…..</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%204.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<p>這表示Windows-Subsystem-Linux (WSL)還沒打開，因此可以用接下來的方法解決。</p></li>
-</ul>
-<h2 id="step-3-開啟powershell">Step 3 開啟PowerShell</h2>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%205.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<p><strong>輸入以下指令:</strong></p>
-<p><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%206.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<h2 id="step-4-啟動ubuntu">Step 4 啟動Ubuntu</h2>
-<p><strong>安裝成功！</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%207.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<p>原本的 C/D/F 槽都 mount 在 /mnt 下</p>
-<p>輸入<code>cd /mnt/c/Users/*Name/Desktop</code></p>
-<p>*Name: 根據自己的電腦名稱去修改</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%208.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<h2 id="step-5-更新套件">Step 5 更新套件</h2>
-<p>輸入 <code>sudo apt-get update</code></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%209.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<p><strong>Done!</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2010.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
-<h1 id="english-version">English version</h1>
-<h2 id="step-1.-turn-on-windows-linux-subsystem">Step 1. Turn on Windows Linux Subsystem</h2>
-<ol type="1">
-<li>Press <strong>“Windows”</strong> + “<strong>R</strong>” keys simultaneously to open the Run prompt.</li>
-<li>Type in “<strong>Control</strong> <strong>Panel</strong>”</li>
-<li>Click on the “<strong>Programs</strong> <strong>and</strong> <strong>Features</strong>” option.</li>
-<li>Select the “<strong>Turn Windows Features On or OFF</strong>” option in the left pane.</li>
-<li>Scroll down and select “<strong>Windows Subsystem for Linux</strong>“</li>
-<li>6.<strong>Click</strong> on “<strong>OK</strong>” to enable the feature.</li>
-</ol>
-<p><img src="/2021/LinuxonWin/Untitled%2011.png" alt="Untitled" style="zoom:50%;"></p>
-<p><img src="/2021/LinuxonWin/Untitled%2012.png" alt="Untitled" style="zoom: 67%;"></p>
-<h2 id="step-2-install-ubuntu">Step 2 Install Ubuntu</h2>
-<ol type="1">
-<li>Open the <strong>Microsoft Store</strong> from the Start menu, and search for “<strong>Ubuntu</strong>” in the store</li>
-<li>To install , click it, and then click the “Get” or “Install” button to install it like any other Store application.</li>
-</ol>
-<p><img src="/2021/LinuxonWin/Untitled%2013.png" alt="Untitled" style="zoom:67%;"></p>
-<h2 id="step-3-turning-wsl-on-through-powershell">Step 3 Turning WSL ON Through PowerShell</h2>
-<ol type="1">
-<li><p>Search for PowerShell, right-click the top result, and select the <strong>Run as administrator option.</strong></p></li>
-<li><p>Type the following command to enable the Linux subsystem and press Enter:</p>
-<p><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code></p>
-<p>Type <strong>Y</strong> and press <strong>Enter t</strong>o confirm and restart your computer.</p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%2014.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure></li>
-</ol>
-<h2 id="step-4-open-ubuntu">Step 4 Open Ubuntu</h2>
-<ol type="1">
-<li><p>Open Start, and click it .</p>
-<p><img src="/2021/LinuxonWin/Untitled%2015.png" alt="Untitled" style="zoom:50%;"></p></li>
-</ol>
-<p><strong>It works!</strong></p>
-<p><img src="/2021/LinuxonWin/Untitled%2016.png" alt="Untitled" style="zoom:50%;"></p>
-<h2 id="step-5-update">Step 5 Update</h2>
-<p>This is the first time you are using your system after installing, you should run the update command: <code>sudo apt-get update</code></p>
-<p><img src="/2021/LinuxonWin/Untitled%209.png" alt="Untitled" style="zoom: 67%;"></p>
-<p><strong>Done!</strong></p>
-<p><img src="/2021/LinuxonWin/Untitled%2010.png" alt="Untitled" style="zoom:67%;"></p>
-<h1 id="references">References</h1>
-<p><a href="https://medium.com/@misscoming/%E5%9C%A8-windows-10-%E4%B8%8A%E8%B7%91-ubuntu-18-04-92f80b2d725b">在 Windows 10 上跑 Ubuntu 18.04</a></p>
-<p><a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">How to Install and Use the Linux Bash Shell on Windows 10</a></p>
-<p><a href="https://appuals.com/how-to-fix-the-wsl-optional-component-is-not-enabled-please-enable-it-and-try-again-error-on-ubuntu/">How to Fix 'The WSL Optional Component is not Enabled. Please Enable it and Try again' Error on Ubuntu? - Appuals.com</a></p>
-<p><a href="https://www.windowscentral.com/install-windows-subsystem-linux-windows-10">Do you want to run Linux on Windows 10? Use WSL, here's how.</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Tisserand relation</title>
-    <url>/2021/Tisserand%20Relation%20T_J/</url>
-    <content><![CDATA[<h1 id="tisserand-relation-t_j">Tisserand Relation T_J</h1>
-<p>Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
-<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-C_J = 2V - v^2 \\         = 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 ) \label{1}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{1}\)</span> <span class="math display">\[
-GM_\odot = \mu_1 = \mu
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r 
-\]</span></p>
-<p>When the comet is not close to Jupiter, so that <span class="math inline">\(\frac{\mu_2}{r_2}\)</span> term is always small to neglect the <span class="math inline">\(\mu_2\)</span> term.</p>
-<p><span class="math display">\[\frac{\mu_2}{r_2} \ll \frac{\mu_1}{r_1}=\frac{\mu}{r}\]</span></p>
-<p>Where <span class="math inline">\(\mu_2 = GM_J\)</span>, <span class="math inline">\(r_2\)</span> is the distance between Jupiter and the comet.</p>
-<p>Then, we can consider the approximation of two-body problem between Sun and comet. From the orbital energy of Sun-comet two-body problem.</p>
-<p><span class="math display">\[
-E = \frac{1}{2}(\ddot x^2 +\ddot y^2 +\ddot z^2 ) - \frac{G(M_\odot+ m_{comet})}{r_1} = -\frac{G(M_\odot+ m_{comet})}{2a}
-\]</span></p>
-<p>Here, <span class="math inline">\(G(M_\odot+ m_{comet}) \approx GM_\odot = \mu_1 = \mu\)</span>, so we calculate the velocity</p>
-<p><span class="math display">\[
-v^2 = (\ddot x^2 +\ddot y^2 +\ddot z^2 ) = G(M_\odot+ m_{comet})(\frac{2}{r_1}-\frac{1}{a}) 
-\\ \implies v^2 = \mu(\frac{2}{r}-\frac{1}{a})
-\]</span></p>
-<p>$$</p>
-<p>$$</p>
-<p>For the angular momentum of the orbit</p>
-<p><span class="math display">\[
- \vec{h} = \vec{r} \times \vec{\dot r}                 = n\sqrt{a(1-e^2)GM} \\                = n\sqrt{a(1-e^2)\mu}                 = constant 
-\]</span> $$</p>
-<p>For the orbital energy,</p>
-<p><span class="math display">\[
-E = \vec h \cdot \vec n \\  &amp;= h \cdot n \cos{i} 
-   \\   &amp;= n\sqrt{a(1-e^2)\mu} \cdot n \cos{i}
-\]</span> the <span class="math inline">\(z&#39;\)</span> component of <span class="math inline">\(\vec h\)</span> is given by</p>
-<p><span class="math display">\[
-2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) =  h \cdot n \cos{i}
-\]</span> So, Jocobi integral <span class="math inline">\(C_J\)</span> becomes</p>
-<p><span class="math display">\[
-C_J &amp;= 2V - v^2 \\
-&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \\   
-&amp; (\because \frac{\mu_1}{r_1} \gg \frac{\mu_2}{r_2}\approx 0 , \mu_1\approx\mu, r_1 \approx r )  \\        
-&amp;= \frac{2\mu}{r} + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;)- v^2 \\        
-&amp; = \frac{2\mu}{r} + 2h \cdot n \cos{i} - (\frac{2\mu}{r}- \frac{\mu}{a}) \\        
-&amp;= \frac{\mu}{a} + 2h \cdot n \cos{i} \\       
-&amp; = \frac{\mu}{a} + 2 \cdot n\sqrt{a(1-e^2)\mu} \cdot n \cos{i} ~~~~ (\because n= 1) \\        
-&amp;= \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i} 
-\]</span></p>
-<p><span class="math display">\[
-C_J = \frac{\mu}{a} + 2\sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant
-\]</span></p>
-<p>If the comet is not close to Jupiter, so that <span class="math inline">\(\frac{1}{r_2}\)</span> is always small to neglect the <span class="math inline">\(\mu_2\)</span> term in Equation , then we have</p>
-<p><span class="math display">\[ T_J = \frac{1}{2} C_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i}  \approx constant \]</span></p>
-<p>Therefore, the approximate relationship with the orbital element of the comet before and after encountering with Jupiter is given by</p>
-<p><span class="math display">\[
-T_J = \frac{\mu}{2a} + \sqrt{a(1-e^2)\mu} \cdot \cos{i} = \frac{\mu}{2a&#39;} + \sqrt{a&#39;(1-e&#39;^2)\mu} \cdot \cos{i&#39;} \label{10}
-\]</span> By measuring the orbital elements of the comet, we can check whether the comet is new observed, or is the passage of a previously observed comet scattered by a close encounter with Jupiter. the result is shown as Equation <span class="math inline">\(\ref{10}\)</span>.</p>
-<p><span class="math display">\[
-\displaylines{x+y\\y+z} 
-\]</span></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>largrange_points</title>
-    <url>/2022/largrange-points/</url>
-    <content><![CDATA[<h1 id="lagrangian-equilibrium-points">Lagrangian Equilibrium Points</h1>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"htwho.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Lagrangian Equilibrium Points Looking for the equilibrium points in the rotating coordinate frame, so that its position with respect to the two masses keep from a constant distance. The equation of th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="largrange_points">
+<meta property="og:url" content="https://htwho.github.io/2022/largrange-points/index.html">
+<meta property="og:site_name" content="Lai Hsuan&#39;s Blue box">
+<meta property="og:description" content="Lagrangian Equilibrium Points Looking for the equilibrium points in the rotating coordinate frame, so that its position with respect to the two masses keep from a constant distance. The equation of th">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L4L5.png">
+<meta property="og:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L1L2L3.png">
+<meta property="og:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L1.png">
+<meta property="og:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L2.png">
+<meta property="og:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L3.png">
+<meta property="article:published_time" content="2022-10-06T17:27:29.000Z">
+<meta property="article:modified_time" content="2022-10-06T17:28:54.208Z">
+<meta property="article:author" content="Hsuan Lai">
+<meta property="article:tag" content="Asteroids, dynamical calculation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://htwho.github.io/2022/largrange-points/FIG3.0_L4L5.png">
+
+<link rel="canonical" href="https://htwho.github.io/2022/largrange-points/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>largrange_points | Lai Hsuan's Blue box</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Lai Hsuan's Blue box</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">有事嗎？</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://htwho.github.io/2022/largrange-points/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hsuan Lai">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lai Hsuan's Blue box">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          largrange_points
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2022-10 01:27:29 / 修改時間：01:28:54" itemprop="dateCreated datePublished" datetime="2022-10-07T01:27:29+08:00">2022-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="lagrangian-equilibrium-points">Lagrangian Equilibrium Points</h1>
 <p>Looking for the equilibrium points in the rotating coordinate frame, so that its position with respect to the two masses keep from a constant distance.</p>
 <p>The equation of the motion in the rotating frame are these equations by moving the centrifugal term (<span class="math inline">\(n^2x\)</span> and<span class="math inline">\(n^2y\)</span> ) to the right-hand side of equation.</p>
 <p><span class="math inline">\(x\)</span>-direction:</p>
@@ -511,90 +558,269 @@ r_1 = 1 + \beta \\    = x + \mu_2 \\ \implies x = -r_1 - \mu_2 \\ = -(1+\beta) -
 <p>This is location of <span class="math inline">\(L_3\)</span> point on the negative <span class="math inline">\(x\)</span>-axis.</p>
 <h2 id="references">References</h2>
 <ol type="1">
-<li><a href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
-<li><a href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
-<li><a href="https://core.ac.uk/download/pdf/157747722.pdf">The circular restricted three-body problem. Carlo Nipoti, Dipartimento di Fisica e Astronomia, Universit`a di Bologna</a></li>
-<li><a href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec18.pdf">Lecture L18 - Exploring the Neighborhood: the Restricted Three-Body Problem</a></li>
-<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem/">The restricted three-body problem (1): Equation of motion, The Jacobi Integral, and The Tisserand Relation</a></li>
-<li><a href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem2/">The restricted three-body problem (2): Lagrangian points and the stability analysis</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cambridge.org/tw/academic/subjects/physics/astronomy-general/solar-system-dynamics?format=PB">Murray C D, Dermott S F.<span class="math inline">\(\textit{ Solar System Dynamics}.\)</span> Cambridge: Cambridge University Press, 1999: 316</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/Analytical-Mechanics-Grant-R-Fowles/dp/0534494927">Fowles and Cassiday.<span class="math inline">\(\textit{Analytical Mechanics}.\)</span> Cengage Learning, 2004</a></li>
+<li><a target="_blank" rel="noopener" href="https://core.ac.uk/download/pdf/157747722.pdf">The circular restricted three-body problem. Carlo Nipoti, Dipartimento di Fisica e Astronomia, Universit`a di Bologna</a></li>
+<li><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/lecture-notes/MIT16_07F09_Lec18.pdf">Lecture L18 - Exploring the Neighborhood: the Restricted Three-Body Problem</a></li>
+<li><a target="_blank" rel="noopener" href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem/">The restricted three-body problem (1): Equation of motion, The Jacobi Integral, and The Tisserand Relation</a></li>
+<li><a target="_blank" rel="noopener" href="http://sengwong.top/2020/09/28/the-restricted-three-body-problem2/">The restricted three-body problem (2): Lagrangian points and the stability analysis</a></li>
 </ol>
-]]></content>
-      <tags>
-        <tag>Asteroids, dynamical calculation</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小行星的軌道參數</title>
-    <url>/2021/2022-note/</url>
-    <content><![CDATA[<h1 id="六個軌道參數的物理意義">六個軌道參數的物理意義</h1>
-<ul>
-<li>semi-major axis和eccentricity這兩個參數主要是用來描述軌道形狀大小;</li>
-<li>而inclination和longitude of the ascending node 這兩個參數在描述軌道平面相較於黃道面(as reference frame)的擺放角度和位置;</li>
-<li>最後argument of perihelion 用來描述天體近日點的和升交點的相對角度。</li>
-<li>mean anomaly 則用來描述該天體某時間點(t0)的位置。</li>
-</ul>
-<hr>
-<h1 id="測試區">測試區</h1>
-<h4 id="看看能不能打出正常的數學公式.....">看看能不能打出正常的數學公式.....</h4>
-<p>舉個例子 <del>栗子🌰</del> <span class="math display">\[
-\begin{equation}\label{eq.1}
-e=mc^2
-\end{equation}
-\]</span> 著名的质能方程 <span class="math inline">\(\eqref{eq.1}\)</span> 由爱因斯坦提出 ...</p>
-<p>对于多行公式，在 <code>equation</code> 环境中，你可以使用 <code>aligned</code> 环境把公式分成多行，</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq.2}
-\begin{aligned}
-a &amp;= b + c \\
-  &amp;= d + e + f + g \\
-  &amp;= h + i
-\end{aligned}
-\end{equation}
-\]</span> Consider a comet is not close with initial semi-major <span class="math inline">\(a\)</span>, eccentricity <span class="math inline">\(e\)</span>, inclination <span class="math inline">\(i\)</span>. After encountering Jupiter, the orbital element of the comet becomes semi-major <span class="math inline">\(a&#39;\)</span>, eccentricity <span class="math inline">\(e&#39;\)</span>, inclination <span class="math inline">\(i&#39;\)</span></p>
-<p>From the Jacobi integral <span class="math inline">\(C_J\)</span>, it remains constant value throughout the encounter with the masses <span class="math inline">\(^{[3]}\)</span>.</p>
-<p><span class="math display">\[
-\begin{equation}\label{eq02}
-\begin{aligned} 
-C_J  &amp;= 2V - v^2 \\&amp;= 2(\frac{\mu_1}{r_1}+\frac{\mu_2}{r_2}) + 2n(\dot x&#39; y&#39; - x&#39; \dot y&#39;) - ( \dot x&#39;^2 + \dot y&#39;^2 + \dot z&#39;^2 )  \label{cj}
-\end{aligned}
-\end{equation}
-\]</span> For instance in Sun-Jupiter-comet problem, because the mass of Jupiter is smaller than Sun <span class="math inline">\((M_j \sim 10^{-3}M_\odot)\)</span>, we take <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(r_1\)</span> as the unity. refer oto eq. <span class="math inline">\(\ref{eq02}\)</span></p>
-<p>$ <span class="math display">\[
-\begin{equation}
-\begin{aligned}
-        GM_\odot = \mu_1 = \mu
-\end{aligned}
-\end{equation}
-\]</span></p>
-<p><span class="math display">\[
-r_1 = r
-\]</span></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello test</title>
-    <url>/2021/test01/</url>
-    <content><![CDATA[<h1 id="hello-你好嗎">Hello, 你好嗎？</h1>
-<h2 id="衷心感謝珍重再見期待再相逢">衷心感謝，珍重再見，期待再相逢～</h2>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-</search>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Asteroids-dynamical-calculation/" rel="tag"># Asteroids, dynamical calculation</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/test01/" rel="prev" title="Hello test">
+      <i class="fa fa-chevron-left"></i> Hello test
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script src="https://utteranc.es/client.js"
+        repo="htwho/htwho.github.io"
+        issue-term="title"
+        theme="github-dark"
+        label="Comments"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lagrangian-equilibrium-points"><span class="nav-number">1.</span> <span class="nav-text">Lagrangian Equilibrium Points</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#triangular-points-when-y-neq-0"><span class="nav-number">1.1.</span> <span class="nav-text">Triangular points (when \(y \neq 0\) )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#collinear-points-when-y-0"><span class="nav-number">1.2.</span> <span class="nav-text">Collinear points (when \(y &#x3D; 0\) )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">1.3.</span> <span class="nav-text">References</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hsuan Lai</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/htwho" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;htwho" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:whtlai20@gmail.com" title="E-Mail → mailto:whtlai20@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hsuan Lai</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
