@@ -24,7 +24,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Install the Linux system on Windows">
 <meta property="og:url" content="https://htwho.github.io/2021/LinuxonWin/index.html">
-<meta property="og:site_name" content="Lai Hsuan&#39;s Blue box">
+<meta property="og:site_name" content="Blue box">
 <meta property="og:description" content="中文版 Step 1 啟用Windows Linux System 需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。   Step 2 安裝Ubuntu 接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝  安裝成功後，就可以在 Windows 選單找到 Ubuntu App">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://htwho.github.io/2021/LinuxonWin/Untitled.png">
@@ -47,8 +47,9 @@
 <meta property="og:image" content="https://htwho.github.io/2021/LinuxonWin/Untitled%209.png">
 <meta property="og:image" content="https://htwho.github.io/2021/LinuxonWin/Untitled%2010.png">
 <meta property="article:published_time" content="2021-10-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-02T09:35:58.338Z">
+<meta property="article:modified_time" content="2022-10-06T17:40:59.988Z">
 <meta property="article:author" content="Hsuan Lai">
+<meta property="article:tag" content="Linux, Ubuntu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://htwho.github.io/2021/LinuxonWin/Untitled.png">
 
@@ -65,7 +66,7 @@
   };
 </script>
 
-  <title>Install the Linux system on Windows | Lai Hsuan's Blue box</title>
+  <title>Install the Linux system on Windows | Blue box</title>
   
 
 
@@ -120,10 +121,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Lai Hsuan's Blue box</h1>
+      <h1 class="site-title">Blue box</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">有事嗎？</p>
+      <p class="site-subtitle" itemprop="description"> </p>
   </div>
 
   <div class="site-nav-right">
@@ -194,7 +195,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lai Hsuan's Blue box">
+      <meta itemprop="name" content="Blue box">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -215,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-11 17:35:58" itemprop="dateModified" datetime="2021-11-02T17:35:58+08:00">2021-11</time>
+                <time title="修改時間：2022-10 01:40:59" itemprop="dateModified" datetime="2022-10-07T01:40:59+08:00">2022-10</time>
               </span>
 
           
@@ -232,8 +233,7 @@
         <h1 id="中文版">中文版</h1>
 <h2 id="step-1-啟用windows-linux-system">Step 1 啟用Windows Linux System</h2>
 <p>需要先啟用 Windows Linux Subsystem 功能。需在『開啟或關閉 Windows 功能中設定』，剛裝完畢後，需要重新開機。</p>
-<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"></p>
-<p><img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
+<p><img src="/2021/LinuxonWin/Untitled.png" alt="Untitled" style="zoom: 67%;"> <img src="/2021/LinuxonWin/Untitled%201.png" alt="Untitled" style="zoom: 67%;"></p>
 <h2 id="step-2-安裝ubuntu">Step 2 安裝Ubuntu</h2>
 <p>接著到Windows Store 裡就有 Ubuntu App 可以選擇安裝</p>
 <p><img src="/2021/LinuxonWin/Untitled%202.png" alt="Untitled" style="zoom:50%;"></p>
@@ -241,15 +241,11 @@
 <p><img src="/2021/LinuxonWin/Untitled%203.png" alt="Untitled" style="zoom:50%;"></p>
 <ul>
 <li><p><strong>啟動Ubuntu後卻發現出現錯誤訊息…..</strong></p>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%204.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%204.png"></p>
 <p>這表示Windows-Subsystem-Linux (WSL)還沒打開，因此可以用接下來的方法解決。</p></li>
 </ul>
 <h2 id="step-3-開啟powershell">Step 3 開啟PowerShell</h2>
-<figure>
-<img src="/2021/LinuxonWin/Untitled%205.png" alt="Untitled"><figcaption aria-hidden="true">Untitled</figcaption>
-</figure>
+<p><img src="/2021/LinuxonWin/Untitled%205.png"></p>
 <p><strong>輸入以下指令:</strong></p>
 <p><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code></p>
 <figure>
@@ -328,6 +324,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux-Ubuntu/" rel="tag"># Linux, Ubuntu</a>
+          </div>
 
         
 
@@ -429,7 +428,7 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">標籤</span>
       </div>
   </nav>
