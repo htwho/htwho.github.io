@@ -25,7 +25,6 @@ Selected journal articles and conference papers are listed below.
           <a href="{{ pub.url | relative_url }}">Details</a>
           {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
           {% if pub.pdf %}<a href="{{ pub.pdf }}">PDF</a>{% endif %}
-          {% if pub.code and pub.code != "" %}<a href="{{ pub.code }}">Code</a>{% endif %}
         </span>
       </p>
     </article>
@@ -49,7 +48,6 @@ Selected journal articles and conference papers are listed below.
           <a href="{{ pub.url | relative_url }}">Details</a>
           {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
           {% if pub.pdf %}<a href="{{ pub.pdf }}">PDF</a>{% endif %}
-          {% if pub.code and pub.code != "" %}<a href="{{ pub.code }}">Code</a>{% endif %}
         </span>
       </p>
     </article>

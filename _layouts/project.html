@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<article class="detail-header project-header">
+  <p class="detail-eyebrow">Project</p>
+  <h1>{{ page.title }}</h1>
+  <p class="detail-meta">
+    {% if page.period %}{{ page.period }}{% endif %}{% if page.period and page.stage_title %} · {% endif %}{% if page.stage_title %}{{ page.stage_title }}{% endif %}
+  </p>
+  <div class="inline-actions">
+    <a href="{{ '/projects/' | relative_url }}">Back to Projects</a>
+    {% if page.demo and page.demo != "" %}<a href="{{ page.demo }}">Demo</a>{% endif %}
+    {% if page.github and page.github != "" %}<a href="{{ page.github }}">GitHub</a>{% endif %}
+  </div>
+</article>
+
+{{ content }}

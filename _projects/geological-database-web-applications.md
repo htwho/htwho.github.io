@@ -10,7 +10,6 @@ order: 2
 period: "Feb. 2023 - Mar. 2024"
 ---
 
-## Design and Development of a Geological Database with Interactive Web Applications
 
 <div class="project-meta-card" markdown="1">
 

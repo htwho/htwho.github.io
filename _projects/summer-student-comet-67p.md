@@ -1,5 +1,5 @@
 ---
-title: "Summer Student Program and Undergraduate Studies"
+title: "Chemical Composition of the Inner Coma of Comet 67P - Rosetta Mission"
 description: "Research on the inner coma composition of comet 67P using Rosetta MIRO data and outgassing analysis."
 image: ""
 github: ""
@@ -10,7 +10,6 @@ order: 2
 period: "Jul. 2018 - Aug. 2019"
 ---
 
-## Summer Student Program and Undergraduate Studies
 
 <div class="project-meta-card" markdown="1">
 
@@ -36,6 +35,5 @@ The Rosetta mission greatly improved our understanding of cometary science throu
 
 This work also examined the chemical composition of the coma to improve understanding of heterogeneity in the nucleus ices. In addition, the MIRO data were compared with outburst events detected by Rosetta OSIRIS in order to investigate dust-gas interactions.
 
-**Section keywords:** minor planets, comet: 67P, space mission: Rosetta mission
 
 </div>

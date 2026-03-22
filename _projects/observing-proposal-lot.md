@@ -10,7 +10,6 @@ order: 3
 period: "May 2021"
 ---
 
-## Observing Proposal at the Lulin One-meter Telescope
 
 <div class="project-meta-card" markdown="1">
 

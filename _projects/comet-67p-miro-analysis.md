@@ -1,5 +1,5 @@
 ---
-title: "Comet 67P MIRO Analysis"
+title: "An Analysis of Regional H2O and CH3OH Production rates of Comet 67P from the MIRO Measurements"
 description: "Microwave spectroscopic analysis of H2O and CH3OH production rates and surface activity of comet 67P using Rosetta MIRO observations."
 image: ""
 github: ""
@@ -10,7 +10,6 @@ order: 2
 period: "Sep. 2019 - Jul. 2021"
 ---
 
-## Comet 67P MIRO Analysis
 
 <div class="project-meta-card" markdown="1">
 

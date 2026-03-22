@@ -10,7 +10,6 @@ order: 1
 period: "Feb. 2022 - Mar. 2024"
 ---
 
-## Geological Modeling
 
 <div class="project-meta-card" markdown="1">
 

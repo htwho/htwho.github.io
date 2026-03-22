@@ -10,7 +10,6 @@ order: 2
 period: "2025 - 2026"
 ---
 
-## Migration Pathways from the Themis Asteroid Family to the Inner Solar Region
 
 <div class="project-meta-card" markdown="1">
 

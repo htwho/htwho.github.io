@@ -13,14 +13,14 @@ These projects reflect my work across geophysics, planetary science, and scienti
 {% if stage_projects.size > 0 %}
 <section class="home-section">
   <h2>{{ stage_projects.first.stage_title }}</h2>
-  <div class="project-grid">
+  <div class="presentation-year-grid">
     {% for project in stage_projects %}
-    <article class="card project-card project-list-card">
+    <article class="presentation-card project-list-card">
       <p class="project-card-period">{{ project.period }}</p>
       <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
       <p>{{ project.description }}</p>
       <div class="quick-links">
-        <a href="{{ project.url | relative_url }}">Details</a>
+        <a class="details-link-sm" href="{{ project.url | relative_url }}">Details</a>
         {% if project.github and project.github != "" %}<a href="{{ project.github }}">GitHub</a>{% endif %}
         {% if project.demo and project.demo != "" %}<a href="{{ project.demo }}">Demo</a>{% endif %}
       </div>

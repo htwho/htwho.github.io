@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="detail-header publication-header">
+  <p class="detail-eyebrow">Publication</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.authors %}
+  <p class="detail-authors">{{ page.authors }}</p>
+  {% endif %}
+  <p class="detail-meta">
+    {% if page.year %}{{ page.year }}{% endif %}{% if page.year and page.venue %} · {% endif %}{% if page.venue %}<em>{{ page.venue }}</em>{% endif %}
+  </p>
+  <div class="inline-actions">
+    <a href="{{ '/publications/' | relative_url }}">Back to Publications</a>
+    {% if page.doi %}<a href="https://doi.org/{{ page.doi }}">DOI</a>{% endif %}
+    {% if page.pdf %}<a href="{{ page.pdf }}">PDF</a>{% endif %}
+  </div>
+</article>
+
+{{ content }}

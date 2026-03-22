@@ -24,10 +24,6 @@ permalink: /contact/
       <td>Room 409, Kwoh-Ting Library and Archives, Graduate Institute of Geophysics, National Central University</td>
     </tr>
     <tr>
-      <th>📍 Google Maps</th>
-      <td><a href="https://maps.app.goo.gl/Dr441spapWJZryLL9">Room 409, Kwoh-Ting Library and Archives, NCU</a></td>
-    </tr>
-    <tr>
       <th>📞 Phone</th>
       <td>+886-3-4227151 ext. 34747</td>
     </tr>

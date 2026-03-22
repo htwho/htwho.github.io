@@ -10,7 +10,6 @@ order: 1
 period: "Sep. 2024 - Present"
 ---
 
-## MiDAS Fault Thermal Monitoring
 
 <div class="project-meta-card" markdown="1">
 

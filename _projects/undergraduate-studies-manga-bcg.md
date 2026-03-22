@@ -1,5 +1,5 @@
 ---
-title: "Undergraduate Studies on BCGs from MaNGA Data"
+title: "Multiple Cores of Brightest Cluster Galaxies from MaNGA Data in Redshift 0-0.2"
 description: "Research on multiple cores in brightest cluster galaxies using SDSS MaNGA data across redshift 0-0.2."
 image: ""
 github: ""
@@ -10,7 +10,6 @@ order: 1
 period: "Sep. 2017 - Dec. 2018"
 ---
 
-## Undergraduate Studies
 
 <div class="project-meta-card" markdown="1">
 
@@ -36,6 +35,5 @@ The brightest cluster galaxies in the present universe are typically located at 
 
 The project also sought to estimate the probability that the brightest galaxy would merge with other galaxies within the redshift range z = 0-0.2. This work contributed to a broader understanding of galaxy interaction histories and the merger-driven mass growth of brightest cluster galaxies.
 
-**Section keywords:** BCG, galaxy clusters, galaxies, SDSS, MaNGA project
 
 </div>

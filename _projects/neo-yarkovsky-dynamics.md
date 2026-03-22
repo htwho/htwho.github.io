@@ -1,5 +1,5 @@
 ---
-title: "NEO Dynamics under the Yarkovsky Effect"
+title: "Near-Earth objects (NEOs) Dynamics under the Yarkovsky Effect"
 description: "Numerical studies of the long-term orbital evolution, migration pathways, and dynamical lifetime of near-Earth objects and Atira asteroids."
 image: ""
 github: ""
@@ -10,7 +10,6 @@ order: 1
 period: "Sep. 2019 - Jul. 2021"
 ---
 
-## NEO Dynamics under the Yarkovsky Effect
 
 <div class="project-meta-card" markdown="1">
 

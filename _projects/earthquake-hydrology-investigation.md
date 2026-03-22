@@ -10,7 +10,6 @@ order: 3
 period: "Feb. 2022 - Mar. 2024"
 ---
 
-## Earthquake Hydrology Investigation
 
 <div class="project-meta-card" markdown="1">
 
