@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-shell">
+        <div class="container header-row">
+          <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+            <span class="theme-toggle-label">Color Theme</span>
+          </button>
+        </div>
+        <div class="header-nav-wrap">
+          <nav class="container header-nav" aria-label="Primary">
+            <ul class="nav-list">
+              <li><a class="nav-link{% if page.url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}"><span class="nav-icon">⌘</span><span>Home</span></a></li>
+              <li><a class="nav-link{% if page.url == '/about/' or page.url == '/cv/' %} is-active{% endif %}" href="{{ '/cv/' | relative_url }}"><span class="nav-icon">◌</span><span>About &amp; CV</span></a></li>
+              <li><a class="nav-link{% if page.url == '/publications/' or page.collection == 'publications' %} is-active{% endif %}" href="{{ '/publications/' | relative_url }}"><span class="nav-icon">⧉</span><span>Publications</span></a></li>
+              <li><a class="nav-link{% if page.url == '/presentations/' %} is-active{% endif %}" href="{{ '/presentations/' | relative_url }}"><span class="nav-icon">△</span><span>Presentations</span></a></li>
+              <li><a class="nav-link{% if page.url == '/projects/' or page.collection == 'projects' %} is-active{% endif %}" href="{{ '/projects/' | relative_url }}"><span class="nav-icon">▦</span><span>Projects</span></a></li>
+              <li><a class="nav-link{% if page.url == '/contact/' %} is-active{% endif %}" href="{{ '/contact/' | relative_url }}"><span class="nav-icon">✦</span><span>Contact</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="container content-shell">
+      <aside class="sidebar-nav" aria-label="Section Navigation">
+        <div class="sidebar-card sidebar-profile">
+          <p class="sidebar-label">Academic Profile</p>
+          <img
+            class="sidebar-avatar"
+            src="{{ '/assets/images/planet.png' | relative_url }}"
+            alt="Profile image"
+          />
+          <h2 class="sidebar-name">{{ site.title }}</h2>
+          <p class="sidebar-role">{{ site.description }}</p>
+          <p class="sidebar-contact"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+
+        <div class="sidebar-card">
+          <p class="sidebar-label">Navigation</p>
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link{% if page.url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}">🏠 Home</a></li>
+            <li><a class="sidebar-link{% if page.url == '/about/' or page.url == '/cv/' %} is-active{% endif %}" href="{{ '/cv/' | relative_url }}">👤 About &amp; CV</a></li>
+            <li><a class="sidebar-link{% if page.url == '/publications/' or page.collection == 'publications' %} is-active{% endif %}" href="{{ '/publications/' | relative_url }}">📚 Publications</a></li>
+            <li><a class="sidebar-link{% if page.url == '/presentations/' %} is-active{% endif %}" href="{{ '/presentations/' | relative_url }}">📜 Presentations</a></li>
+            <li><a class="sidebar-link{% if page.url == '/projects/' or page.collection == 'projects' %} is-active{% endif %}" href="{{ '/projects/' | relative_url }}">🔬 Projects</a></li>
+            <li><a class="sidebar-link{% if page.url == '/contact/' %} is-active{% endif %}" href="{{ '/contact/' | relative_url }}">✉️ Contact</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <main class="content">
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var storageKey = "theme";
+        var root = document.documentElement;
+        var toggle = document.getElementById("theme-toggle");
+        var media = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function getPreferredTheme() {
+          var stored = localStorage.getItem(storageKey);
+          if (stored === "light" || stored === "dark") return stored;
+          return media.matches ? "dark" : "light";
+        }
+
+        function applyTheme(theme) {
+          root.setAttribute("data-theme", theme);
+          if (toggle) {
+            var icon = toggle.querySelector(".theme-toggle-icon");
+            var label = toggle.querySelector(".theme-toggle-label");
+            if (icon) icon.textContent = theme === "dark" ? "☾" : "☼";
+            if (label) label.textContent = theme === "dark" ? "Dark Theme" : "Light Theme";
+            toggle.setAttribute("aria-pressed", String(theme === "dark"));
+          }
+        }
+
+        applyTheme(getPreferredTheme());
+
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            var nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            localStorage.setItem(storageKey, nextTheme);
+            applyTheme(nextTheme);
+          });
+        }
+
+        media.addEventListener("change", function (event) {
+          if (!localStorage.getItem(storageKey)) {
+            applyTheme(event.matches ? "dark" : "light");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
