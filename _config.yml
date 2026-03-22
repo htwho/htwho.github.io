@@ -1,8 +1,8 @@
 title: "Hsuan-Ting Lai"
 email: "htlai@e-dream.tw"
 description: "Ph.D. student in Geophysics at National Central University"
-baseurl: ""
-url: ""
+url: "https://htwho.github.io"
+baseurl: "/htlai.github.io"
 markdown: kramdown
 permalink: pretty
 orcid_url: "https://orcid.org/0000-0001-9049-7580"
