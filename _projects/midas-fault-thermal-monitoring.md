@@ -19,7 +19,11 @@ period: "Sep. 2024 - Present"
 
 **Keywords:** distributed temperature sensing, borehole optical fiber, Milun fault, thermal anomaly, fault-zone thermal structure
 
-**Related links:** [MiDAS Project Website](https://e-dream.tw/midas_project/), [Representative Paper in *Communications Earth & Environment*](https://www.nature.com/articles/s43247-024-01558-6)
+**Related links:**
+<ul class="meta-links">
+  <li><a href="https://e-dream.tw/midas_project/">MiDAS Project Website</a></li>
+  <li><a href="https://www.nature.com/articles/s43247-024-01558-6">Representative Paper in <em>Communications Earth &amp; Environment</em></a></li>
+</ul>
 
 </div>
 

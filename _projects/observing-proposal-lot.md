@@ -19,7 +19,11 @@ period: "May 2021"
 
 **Keywords:** dynamically unstable asteroids, outer main belt, broadband photometry, taxonomy, weak cometary activity, Lulin Observatory
 
-**Related links:** [Astronomer's Telegram No. 14522](https://www.astronomerstelegram.org/?read=14522), [Reference Paper in *The Planetary Science Journal*](https://iopscience.iop.org/article/10.3847/PSJ/ad226b)
+**Related links:**
+<ul class="meta-links">
+  <li><a href="https://www.astronomerstelegram.org/?read=14522">Astronomer's Telegram No. 14522</a></li>
+  <li><a href="https://iopscience.iop.org/article/10.3847/PSJ/ad226b">Reference Paper in <em>The Planetary Science Journal</em></a></li>
+</ul>
 
 </div>
 

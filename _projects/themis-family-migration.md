@@ -20,7 +20,11 @@ period: "Dec. 2025 - 2026"
 
 **Keywords:** Themis asteroid family, Yarkovsky effect, mean-motion resonances, Jupiter scattering, orbital evolution
 
-**Related link:** [TPS 2026 poster entry](https://tps2026.conf.tw/site/order/1655/poster.aspx?sid=1655&lang=en), [Poster on ResearchGate](https://www.researchgate.net/publication/399827210_Migration_pathways_from_the_Themis_asteroid_family_to_the_inner_solar_region)
+**Related links:**
+<ul class="meta-links">
+  <li><a href="https://tps2026.conf.tw/site/order/1655/poster.aspx?sid=1655&lang=en">TPS 2026 poster entry</a></li>
+  <li><a href="https://www.researchgate.net/publication/399827210_Migration_pathways_from_the_Themis_asteroid_family_to_the_inner_solar_region">Poster on ResearchGate</a></li>
+</ul>
 
 </div>
 

@@ -6,19 +6,13 @@ permalink: /
 <section class="hero hero-panel">
   <p class="eyebrow">Academic Homepage</p>
   <h1 class="hero-title">{{ site.title }}</h1>
-  <p class="meta">Ph.D. Student in Geophysics | National Central University</p>
+  <p class="meta">Ph.D. Student in Geophysics | National Central University | Taiwan</p>
   <p class="hero-subtitle">
     I am a Ph.D. student at the Graduate Institute of Geophysics, National Central University. My current
     research focuses on borehole temperature monitoring using distributed temperature sensing, and the thermal
     structure of active faults. I also work on planetary science topics, especially the dynamics and
     long-term evolution of small bodies in the Solar System.
   </p>
-  <div class="profile-links">
-    <a href="{{ site.scholar_url }}">Google Scholar</a>
-    <a href="{{ site.researchgate_url }}">ResearchGate</a>
-    <a href="{{ site.orcid_url }}">ORCID</a>
-    <a href="{{ site.github_url }}">GitHub</a>
-  </div>
 </section>
 
 ## Research Overview

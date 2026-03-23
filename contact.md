@@ -47,10 +47,10 @@ permalink: /contact/
       <th>🌐 ORCID</th>
       <td><a class="notion-link" href="{{ site.orcid_url }}"><span class="service-icon-svg service-icon-orcid" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M7.2 8.1h1.8V16H7.2V8.1Zm.9-2.5a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1Zm2.6 2.5h4.08c3.03 0 4.86 1.57 4.86 3.95 0 2.43-1.86 3.95-4.86 3.95H10.7V8.1Zm1.8 1.58v4.74h2.08c1.84 0 3-.87 3-2.37 0-1.5-1.16-2.37-3-2.37H12.5Z"/></svg></span><span>ORCID 0000-0001-9049-7580</span></a></td>
     </tr>
-    <tr>
+    <!-- <tr>
       <th>🌐 X/Twitter</th>
       <td><a class="notion-link" href="https://x.com/htwho20"><span class="service-icon-svg service-icon-x" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5.2 4h3.55l3.88 5.45L17.3 4H19l-5.6 6.4L20 20h-3.56l-4.12-5.8L7.2 20H5.5l6-6.88L5.2 4Z"/><path d="M8.33 5.63h-.8l7.95 12.74h.79L8.33 5.63Z" fill="#fff"/></svg></span><span>Twitter Hsuan-Ting Lai (@htwho20) on X</span></a></td>
-    </tr>
+    </tr> -->
   </tbody>
 </table>
 

@@ -76,6 +76,38 @@ body {
   margin-top: 3rem;
 }
 
+.footer-row {
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.footer-notion-link {
+  gap: 0.38rem;
+  padding: 0.14rem 0.34rem;
+  font-size: 0.9rem;
+}
+
+.footer-notion-link .service-icon-svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 1.05rem;
+}
+
 .header-shell {
   border-bottom: 1px solid var(--header-line);
   background: var(--header-bg);
@@ -91,10 +123,10 @@ body {
 }
 
 .site-title {
-  font-size: 1.16rem;
+  font-size: 1.55rem;
   margin: 0;
   letter-spacing: 0.02em;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: none;
   text-align: left;
 }
@@ -114,24 +146,26 @@ a:hover {
 }
 
 .theme-toggle {
-  border: 1px solid var(--header-line);
-  background: var(--header-bg);
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--header-line) 45%);
+  background: color-mix(in srgb, var(--header-bg-elevated) 78%, var(--panel-bg) 22%);
   color: var(--header-link);
-  padding: 0.38rem 0.7rem;
+  padding: 0.34rem 0.5rem 0.34rem 0.42rem;
   font: inherit;
-  font-size: 0.84rem;
+  font-size: 1.06rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  border-radius: 8px;
+  gap: 0.55rem;
+  border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
 .theme-toggle:hover {
-  background: var(--header-bg-elevated);
-  border-color: var(--accent);
+  background: color-mix(in srgb, var(--header-bg-elevated) 68%, var(--accent) 32%);
+  border-color: var(--link-emphasis);
   transform: translateY(-1px);
 }
 
@@ -139,13 +173,26 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--panel-bg);
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 3px rgba(16, 21, 34, 0.16);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .theme-toggle-label {
-  color: var(--header-muted);
+  color: var(--header-link);
+  padding-right: 0.1rem;
+  font-size: 0.98rem;
+}
+
+:root[data-theme="dark"] .theme-toggle-icon {
+  transform: translateX(0.32rem);
+  background: color-mix(in srgb, var(--panel-bg) 82%, #ffffff 18%);
+  color: var(--link-emphasis);
 }
 
 .header-nav-wrap {
@@ -173,9 +220,9 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.9rem;
+  font-size: 1.03rem;
   padding: 0.4rem 0.66rem;
-  border: 1px solid transparent;
+  border: 0.5px solid transparent;
   border-radius: 8px;
   transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
 }
@@ -186,7 +233,7 @@ a:hover {
   justify-content: center;
   width: 1rem;
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   transition: color 0.18s ease, transform 0.18s ease;
 }
 
@@ -302,6 +349,39 @@ a:hover {
 .sidebar-mini-links a:hover {
   border-color: var(--accent);
   text-decoration: none;
+}
+
+.sidebar-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.sidebar-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.sidebar-social-link:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--bg-elevated) 74%, var(--accent) 26%);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.sidebar-social-link .service-icon-svg {
+  width: 1.50rem;
+  height: 1.50rem;
+  flex: 0 0 1.54rem;
 }
 
 .sidebar-list {
@@ -527,6 +607,15 @@ li {
 
 .project-meta-card p {
   margin: 0.55rem 0;
+}
+
+.project-meta-card .meta-links {
+  margin: 0.35rem 0 0.15rem 1.15rem;
+  padding: 0;
+}
+
+.project-meta-card .meta-links li {
+  margin: 0.3rem 0;
 }
 
 .project-panel {
@@ -860,7 +949,7 @@ li {
 }
 
 .info-table th {
-  width: 220px;
+  width: 180px;
   color: var(--muted);
   font-weight: 600;
 }
@@ -887,9 +976,9 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  flex: 0 0 1rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 1.35rem;
 }
 
 .service-icon-svg svg {
