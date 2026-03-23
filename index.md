@@ -9,9 +9,9 @@ permalink: /
   <p class="meta">Ph.D. Student in Geophysics | National Central University</p>
   <p class="hero-subtitle">
     I am a Ph.D. student at the Graduate Institute of Geophysics, National Central University. My current
-    research focuses on borehole temperature monitoring, distributed temperature sensing, and the thermal
+    research focuses on borehole temperature monitoring using distributed temperature sensing, and the thermal
     structure of active faults. I also work on planetary science topics, especially the dynamics and
-    long-term evolution of small bodies in the inner Solar System.
+    long-term evolution of small bodies in the Solar System.
   </p>
   <div class="profile-links">
     <a href="{{ site.scholar_url }}">Google Scholar</a>
@@ -28,29 +28,24 @@ permalink: /
     <p class="citation-year">Focus Areas</p>
     <ul class="card-list">
       <li>Borehole temperature monitoring</li>
-      <li>Distributed temperature sensing</li>
       <li>Thermal properties of active faults</li>
-      <li>Small-body dynamics in the inner Solar System</li>
+      <li>Small-body dynamics in the Solar System</li>
       <li>Planetary science data analysis</li>
     </ul>
   </article>
 </div>
 
 
-## Selected Publications
+## Selected Project
 
-{% assign selected_pubs = site.publications | sort: 'year' | reverse %}
 <div class="citation-blocks">
-  {% for pub in selected_pubs limit:2 %}
   <article class="citation-card">
-    <p class="citation-year">{{ pub.year }}</p>
-    <p class="citation-text">
-      {{ pub.authors }} ({{ pub.year }}). <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>.
-      <em>{{ pub.venue }}</em>.
-    </p>
+    <p class="citation-year">Current Research</p>
+    <p class="citation-text"><a href="{{ '/projects/midas-fault-thermal-monitoring/' | relative_url }}">MiDAS Fault Thermal Monitoring</a>. Borehole optical fiber sensing and distributed temperature sensing for investigating the thermal characteristics of the Milun fault.</p>
   </article>
-  {% endfor %}
 </div>
+
+
 
 ## Explore More
 

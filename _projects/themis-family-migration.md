@@ -7,13 +7,13 @@ demo: ""
 stage: "phd_geophysics"
 stage_title: "Ph.D. Research in Geophysics"
 order: 2
-period: "2025 - 2026"
+period: "Dec. 2025 - 2026"
 ---
 
 
 <div class="project-meta-card" markdown="1">
 
-**Period:** 2025 - 2026
+**Period:** Dec. 2025 - 2026
 
 **Advisor:** Prof. Wing-Huen Ip  
 **Affiliation:** Department of Earth Sciences / Institute of Astronomy, National Central University
@@ -34,4 +34,16 @@ The simulations show that thermally driven semimajor-axis drift gradually transp
 
 Overall, the results indicate that Yarkovsky-driven transport can inject Themis family asteroids into resonance-dominated regions, but planetary scattering strongly limits their survival as long-lived inner Solar System objects. Jupiter therefore plays the central role in shaping the long-term dynamical evolution and loss pathways of Themis-family asteroids.
 
+</div>
+
+<div class="figure-stack">
+  <figure class="figure-card">
+    <img src="{{ '/assets/images/Themis/Themis_1.png' | relative_url }}" alt="Figure 1" />
+    <figcaption class="media-caption">Figure 1. Overview of the Themis asteroid family in orbital-element space. The top panel highlights the location of the family in semimajor axis-eccentricity space relative to nearby Jovian mean-motion resonances, while the lower panels summarize the distributions of semimajor axis, eccentricity, and inclination for 4,782 members. The right-hand panels show how Yarkovsky drift and spin-axis obliquity affect the spread of family members and their transport toward resonance boundaries.</figcaption>
+  </figure>
+
+  <figure class="figure-card">
+    <img src="{{ '/assets/images/Themis/Themis_2.png' | relative_url }}" alt="Figure 2" />
+    <figcaption class="media-caption">Figure 2. Time evolution of a representative Themis-family asteroid that is ultimately removed from the system. The upper panels track changes in semimajor axis, eccentricity, and inclination over time, showing gradual Yarkovsky-driven migration followed by rapid orbital excitation near the end of the integration. The lower panels plot the particle's orbital path in element space, illustrating how resonance-driven transport and subsequent close encounters with Jupiter lead to dynamical ejection.</figcaption>
+  </figure>
 </div>

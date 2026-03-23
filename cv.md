@@ -8,7 +8,7 @@ permalink: /cv/
 <div class="citation-blocks two-column-cards">
   <article class="citation-card compact-card">
     <p class="citation-year">Curriculum Vitae</p>
-    <p class="citation-text">You can download my CV here: <a href="/assets/files/2026_htlai_CV.pdf">Curriculum Vitae</a></p>
+    <p class="citation-text">You can download my CV here: <a href="{{ '/assets/files/2026_htlai_CV.pdf' | relative_url }}">Curriculum Vitae</a></p>
   </article>
 </div>
 
@@ -29,9 +29,8 @@ permalink: /cv/
     <p class="citation-year">Research Interests</p>
     <ul class="card-list">
       <li>Borehole temperature monitoring</li>
-      <li>Distributed temperature sensing</li>
       <li>Thermal properties of active faults</li>
-      <li>Small-body dynamics in the inner Solar System</li>
+      <li>Small-body dynamics in the Solar System</li>
       <li>Planetary science data analysis</li>
     </ul>
   </article>
@@ -74,32 +73,15 @@ permalink: /cv/
   </article>
 </div>
 
-## 📚 Selected Publications
-
-<div class="citation-blocks">
-  <article class="citation-card">
-    <p class="citation-year">2022</p>
-    <p class="citation-text">Lai, H.-T. and Ip, W.-H. (2022). <a href="/publications/2022-atira-asteroids/">The orbital evolution of Atira asteroids</a>. <em>Monthly Notices of the Royal Astronomical Society</em>, 517(4), 5921-5929.</p>
-  </article>
-  <article class="citation-card">
-    <p class="citation-year">2022</p>
-    <p class="citation-text">Hsu, Y.-H., Lin, Y.-T., Huang, S., Nelson, D., Rodriguez-Gomez, V., Lai, H.-T., and others (2022). <a href="/publications/2022-manga-multiple-cores/">SDSS-IV MaNGA: Cannibalism Caught in the Act-On the Frequency of Occurrence of Multiple Cores in Brightest Cluster Galaxies</a>. <em>The Astrophysical Journal</em>, 933(1), 61.</p>
-  </article>
-</div>
 
 ## 📜 Recent Presentations
 
+{% assign presentations_page = site.pages | where: "path", "presentations.md" | first %}
 <div class="citation-blocks">
+  {% for item in presentations_page.recent_presentations %}
   <article class="citation-card">
-    <p class="citation-year">2026</p>
-    <p class="citation-text">Thermal Characteristics of the Milun Fault Using Borehole Optical Fiber Sensing, SSA 2026.</p>
+    <p class="citation-year">{{ item.year }}</p>
+    <p class="citation-text">{{ item.text }}</p>
   </article>
-  <article class="citation-card">
-    <p class="citation-year">2026</p>
-    <p class="citation-text">Migration Pathways from the Themis Asteroid Family to the Inner Solar Region, TPS 2026.</p>
-  </article>
-  <article class="citation-card">
-    <p class="citation-year">2025</p>
-    <p class="citation-text">Persistent Thermal Anomalies beneath the Milun Fault Using Borehole Optical Fiber Sensing, ACES 2025.</p>
-  </article>
+  {% endfor %}
 </div>

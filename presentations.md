@@ -1,6 +1,13 @@
 ---
 title: Presentations
 permalink: /presentations/
+recent_presentations:
+  - year: 2026
+    text: "Thermal Characteristics of the Milun Fault Using Borehole Optical Fiber Sensing, SSA 2026."
+  - year: 2026
+    text: "Migration Pathways from the Themis Asteroid Family to the Inner Solar Region, TPS 2026."
+  - year: 2025
+    text: "Persistent Thermal Anomalies beneath the Milun Fault Using Borehole Optical Fiber Sensing, ACES 2025."
 ---
 
 # 📜 Presentations
