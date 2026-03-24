@@ -5,3 +5,18 @@ _site/
 .sass-cache/
 .bundle/
 vendor/bundle/
+
+# macOS
+._*
+
+# Editor / IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.orig

@@ -15,7 +15,7 @@ permalink: /
   </p>
 </section>
 
-## Research Overview
+## 🔍 Research Interests
 
 <div class="citation-blocks">
   <article class="citation-card">

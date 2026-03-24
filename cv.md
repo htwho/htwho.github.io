@@ -22,7 +22,7 @@ permalink: /cv/
   </article>
  </div>
 
-## 🔍 Research Interests
+<!-- ## 🔍 Research Interests
 
 <div class="citation-blocks">
   <article class="citation-card">
@@ -34,7 +34,7 @@ permalink: /cv/
       <li>Planetary science data analysis</li>
     </ul>
   </article>
-</div>
+</div> -->
 
 ## 🎓 Education
 

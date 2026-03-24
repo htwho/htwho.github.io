@@ -22,7 +22,7 @@ period: "Sep. 2024 - Present"
 **Related links:**
 <ul class="meta-links">
   <li><a href="https://e-dream.tw/midas_project/">MiDAS Project Website</a></li>
-  <li><a href="https://www.nature.com/articles/s43247-024-01558-6">Representative Paper in <em>Communications Earth &amp; Environment</em></a></li>
+  <li><a href="https://www.nature.com/articles/s43247-024-01558-6">Representative Paper in <em>Communications Earth &amp; Environment</em> (Ma et al, 2024)</a></li>
 </ul>
 
 </div>
@@ -31,7 +31,7 @@ period: "Sep. 2024 - Present"
 
 ### Abstract
 
-This project investigates the thermal characteristics of the Milun fault using borehole optical fiber sensing and distributed temperature sensing (DTS). The Milun fault is an active east-dipping, left-lateral reverse fault in the northern Longitudinal Valley of eastern Taiwan and has produced several damaging earthquakes in recent decades. Because temperature anomalies near active faults may reflect frictional heating, fluid migration, or lithologic contrasts, long-term thermal monitoring provides an important way to study fault-zone structure and processes.
+This project investigates the thermal characteristics of the Milun fault using distributed temperature sensing (DTS). The Milun fault is an active east-dipping, left-lateral reverse fault in the northern Longitudinal Valley of eastern Taiwan and has produced several damaging earthquakes in recent decades. Because temperature anomalies near active faults may reflect frictional heating, fluid migration, or lithologic contrasts, long-term thermal monitoring provides an important way to study fault-zone structure and processes.
 
 The work is part of the Milun fault Drilling and All-inclusive Sensing Project (MiDAS), a scientific drilling program initiated in 2021 to monitor the physical properties of the fault. In MiDAS Hole-A, a distributed optical fiber system enables continuous, high-resolution temperature measurements along depth. Long-term observations since September 2022 identified a persistent but decaying thermal anomaly at approximately 540-580 m depth beneath the fault zone.
 
