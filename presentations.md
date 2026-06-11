@@ -3,11 +3,13 @@ title: Presentations
 permalink: /presentations/
 recent_presentations:
   - year: 2026
+    text: "Dynamical Migration Pathways of Themis Family Asteroids, ACM 2026."
+  - year: 2026
+    text: "Estimating the Thermal Diffusivity Structure Beneath Borehole A of the Milun Fault Using Long-Term DTS Observations, Geosciences 2026."
+  - year: 2026
     text: "Thermal Characteristics of the Milun Fault Using Borehole Optical Fiber Sensing, SSA 2026."
   - year: 2026
     text: "Migration Pathways from the Themis Asteroid Family to the Inner Solar Region, TPS 2026."
-  - year: 2025
-    text: "Persistent Thermal Anomalies beneath the Milun Fault Using Borehole Optical Fiber Sensing, ACES 2025."
 ---
 
 # 📜 Presentations
@@ -17,6 +19,20 @@ Conference papers, oral presentations, and posters are listed below by year.
 <section class="home-section">
   <h2>2026</h2>
   <div class="presentation-year-grid">
+    <article class="presentation-card">
+      <h3>Dynamical Migration Pathways of Themis Family Asteroids</h3>
+      <p class="presentation-authors"><strong>Lai, H.-T.*</strong> and Ip, W.-H. (2026).</p>
+      <p class="presentation-meta"><em>Poster presented at 15th Asteroids, Comets, Meteors Conference (ACM 2026)</em></p>
+      <p class="presentation-location">July 06-10, 2026, Center for Modern Didactics Poznan University of Technology, Poznan, Poland <span class="inline-actions"><a href="https://acm2026.eu/">Link</a></span></p>
+    </article>
+
+    <article class="presentation-card">
+      <h3>Estimating the Thermal Diffusivity Structure Beneath Borehole A of the Milun Fault Using Long-Term DTS Observations</h3>
+      <p class="presentation-authors"><strong>Lai, H.-T.*</strong>, Ma, K.-F. and Lin, Y.-Y. (2026).</p>
+      <p class="presentation-meta"><em>Oral presented at 2026 Joint Annual Meeting and Scientific Conference of the Geophysical Society of the Republic of China and the Geological Society of the Republic of China (Geosciences 2026)</em></p>
+      <p class="presentation-location">June 15-16, 2026, National Chung Cheng University, Chiayi, Taiwan <span class="inline-actions"><a href="https://cgs.gst.org.tw/Geosciences2026/agenda">Link</a></span></p>
+    </article>
+
     <article class="presentation-card">
       <h3>Thermal Characteristics of the Milun Fault Using Borehole Optical Fiber Sensing</h3>
       <p class="presentation-authors"><strong>Lai, H.-T.*</strong>, Ma, K.-F. and Lin, Y.-Y. (2026).</p>
@@ -38,7 +54,7 @@ Conference papers, oral presentations, and posters are listed below by year.
   <div class="presentation-year-grid">
     <article class="presentation-card">
       <h3>Characterizing Fault Zone Architecture with Borehole Fiber-Optic Acoustic and Thermal Measurements</h3>
-      <p class="presentation-authors">Ma, K.-F.*, Lai, H.-T.** and Hsiao, L. (2025).</p>
+      <p class="presentation-authors">Ma, K.-F.* and <strong>Lai, H.-T. </strong>(2025).</p>
       <p class="presentation-meta"><em>Oral presented at The 2025 American Geophysical Union (AGU) Fall Meeting (AGU 2025)</em></p>
       <p class="presentation-location">December 15-19, 2025, New Orleans, Louisiana, United States <span class="inline-actions"><a href="https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1942165">Link</a></span></p>
     </article>

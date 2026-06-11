@@ -781,9 +781,17 @@ li {
   margin-bottom: 0;
 }
 
+.project-list-card .quick-links a {
+  min-width: 4.25rem;
+  justify-content: center;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+}
+
 .project-list-card .quick-links .details-link-sm {
-  padding: 0.3rem 0.58rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 0.75rem;
+  font-size: inherit;
 }
 
 .presentation-year-grid {
@@ -808,10 +816,13 @@ li {
 }
 
 .presentation-location {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
+  display: block;
+}
+
+.presentation-location .inline-actions {
+  display: inline-flex;
+  margin-left: 0.45rem;
+  vertical-align: middle;
 }
 
 .inline-actions {

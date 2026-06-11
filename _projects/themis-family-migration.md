@@ -1,5 +1,5 @@
 ---
-title: "Migration Pathways from the Themis Asteroid Family to the Inner Solar Region"
+title: "Dynamical Migration Pathways of Themis Family Asteroids"
 description: "Long-term N-body simulations of Themis family asteroids under the Yarkovsky effect and planetary perturbations, with emphasis on resonance-driven transport and dynamical loss."
 image: ""
 github: ""
